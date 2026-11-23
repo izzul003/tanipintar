@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog pertanian</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F7F5;font-family:'Inter',system-ui,sans-serif;color:#132A17}
+a{color:#2E7D32}a:hover{color:#1B5E20}
+.serif{font-family:'Poppins',system-ui,sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.nav{padding:10px 14px;border-radius:10px;text-decoration:none;color:#3E5643;font-weight:500;font-size:15px}
+.nav:hover{background:#EDF3EF;color:#1B5E20}
+.nav-on{background:#E8F5E9;color:#1B5E20;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;background:#2E7D32;color:#fff;font:600 15px 'Inter',sans-serif;text-decoration:none;border:0;cursor:pointer;box-sizing:border-box}
+.btn:hover{background:#1B5E20;color:#fff}
+.btn-sun{background:#FFA000;color:#132A17}.btn-sun:hover{background:#F57C00;color:#132A17}
+.btn-line{background:transparent;color:#F4F7F5;border:1px solid rgba(255,255,255,.45)}.btn-line:hover{background:rgba(255,255,255,.1);color:#fff}
+.btn-ghost{background:#fff;color:#1B5E20;border:1px solid #DCE5DE}.btn-ghost:hover{background:#EDF3EF;color:#1B5E20}
+.card{background:#fff;border:1px solid #DCE5DE;border-radius:20px;box-sizing:border-box}
+a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-color:#81C784;color:inherit}
+.tag{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;font-size:12.5px;font-weight:600}
+.tag-siram{background:#E0F2FE;color:#0369A1}.tag-pupuk{background:#FEF3C7;color:#92400E}.tag-periksa{background:#E8F5E9;color:#1B5E20}
+.chip{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid #DCE5DE;background:#fff;color:#132A17;font:500 14px 'Inter',sans-serif;text-decoration:none;cursor:pointer}
+.chip:hover{border-color:#2E7D32;color:#1B5E20}
+.chip-on{background:#1B5E20;border-color:#1B5E20;color:#fff}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.muted{color:#3E5643}
+.link{font-weight:600;font-size:14.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:44px}
+.check{width:28px;height:28px;border-radius:50%;border:2px solid #A3B5A7;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:none;color:#fff}
+@media (max-width:720px){.wrap{padding:0 18px}h1.hero{font-size:40px !important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<template id="dc-tpl">
+<div style="min-height: 100vh">
+<header style="background: #FFFFFF; border-bottom: 1px solid #DCE5DE">
+<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding-top: 14px; padding-bottom: 14px">
+<a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #132A17">
+<span style="width: 40px; height: 40px; border-radius: 12px; background: #2E7D32; color: #fff; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"/><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"/><path d="M12 14c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"/></svg></span>
+<span style="display: flex; flex-direction: column"><span class="serif" style="font-weight: 700; font-size: 20px; line-height: 1.1">TaniPintar</span><span style="font-size: 12px; color: #3E5643">Pendamping tanam</span></span>
+</a>
+<nav aria-label="Navigasi utama" style="display: flex; flex-wrap: wrap; gap: 2px; flex: 1 1 auto">
+<a class="nav" href="index.html">Beranda</a>
+<a class="nav" href="KatalogBibit.html">Katalog Bibit</a>
+<a class="nav" href="JadwalRawat.html">Jadwal Rawat</a>
+<a class="nav" href="PanduanDetail.html">Panduan</a>
+<a class="nav nav-on" href="Blog.html" aria-current="page">Blog</a>
+<a class="nav" href="TanyaPenyuluh.html">Tanya Penyuluh</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px">
+<a class="btn" href="KatalogBibit.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Mulai tanam</a>
+<button aria-label="Akun saya" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #DCE5DE; background: #F4F7F5; font: 600 14px 'Inter', sans-serif; color: #1B5E20; cursor: pointer">RU</button>
+</div>
+</div>
+</header>
+<section style="background: #E8F5E9; padding: 48px 0 40px">
+<div class="wrap">
+<div class="eyebrow" style="color: #B91C1C">Blog TaniPintar</div>
+<h1 class="serif" style="margin: 8px 0 10px; font-size: 52px; font-weight: 700; line-height: 1.04">Kabar &amp; cerita dari kebun</h1>
+<p class="muted" style="margin: 0 0 28px; font-size: 17px; max-width: 620px; line-height: 1.6">Tips musiman, cerita petani, dan kabar pertanian terbaru — ditulis agar mudah dipraktikkan di kebun rumah.</p>
+<a class="card" href="BlogDetail.html" style="display: flex; flex-wrap: wrap; overflow: hidden; padding: 0">
+<img src="images/blog-drainase-musim-hujan.jpg" alt="Bedengan kebun basah selepas hujan" style="flex: 1 1 460px; min-width: 0; min-height: 300px; max-height: 380px; object-fit: cover; display: block">
+<div style="flex: 1 1 420px; padding: 36px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
+<div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap"><span class="tag" style="background: #FFA000; color: #132A17">Pilihan editor</span><span class="tag tag-siram">Musim &amp; cuaca</span></div>
+<h2 class="serif" style="margin: 0; font-size: 32px; line-height: 1.18; font-weight: 700">Musim hujan datang: siapkan drainase bedengan sebelum akar busuk</h2>
+<p class="muted" style="margin: 0; font-size: 16px; line-height: 1.6">Cara sederhana meninggikan bedengan, membuat parit, dan melindungi polibag dari genangan.</p>
+<div style="display: flex; gap: 10px; align-items: center; font-size: 14px"><span style="width: 32px; height: 32px; border-radius: 50%; background: #E8F5E9; color: #2E7D32; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px">TP</span><span>Tim Penyuluh TaniPintar</span><span class="muted">· 20 Nov 2026 · 6 menit</span></div>
+</div>
+</a>
+</div>
+</section>
+
+<section style="padding: 36px 0 40px">
+<div class="wrap">
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; margin-bottom: 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px" role="group" aria-label="Kategori artikel">
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="6">
+<button class="{{c.cls}}" onClick="{{c.pick}}" aria-pressed="{{c.on}}">{{c.label}}</button>
+</sc-for>
+</div>
+<form role="search" style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE5DE; background: #fff; border-radius: 12px; padding: 0 12px; height: 44px">
+<span class="muted" style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span>
+<label for="cb" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Cari artikel</label>
+<input id="cb" placeholder="Cari artikel" style="border: 0; height: 40px; font: 15px 'Inter', sans-serif; width: 200px; background: transparent">
+</form>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px">
+<sc-for list="{{posts}}" as="p" hint-placeholder-count="6">
+<a class="card" href="BlogDetail.html" style="padding: 0; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 190px; position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 16px; box-sizing: border-box; {{p.bg}}"><img src="{{p.img}}" alt="{{p.title}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><span class="tag" style="position: relative; background: #fff; color: #132A17">{{p.cat}}</span></div>
+<div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 8px; flex: 1">
+<h3 style="margin: 0; font-size: 18.5px; line-height: 1.35; font-weight: 700">{{p.title}}</h3>
+<p class="muted" style="margin: 0; font-size: 14.5px; line-height: 1.55">{{p.ex}}</p>
+<div class="muted" style="font-size: 13px; margin-top: auto; padding-top: 8px">{{p.date}} · {{p.read}}</div>
+</div>
+</a>
+</sc-for>
+</div>
+<div style="display: flex; justify-content: center; margin-top: 32px"><button class="btn btn-ghost">Muat artikel lainnya</button></div>
+</div>
+</section>
+
+<section style="padding: 24px 0 72px">
+<div class="wrap">
+<div style="padding: 36px; border-radius: 24px; background: #fff; border: 1px solid #DCE5DE; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
+<div style="flex: 1 1 380px"><h2 class="serif" style="margin: 0 0 6px; font-size: 26px; font-weight: 700">Kabar kebun tiap Jumat</h2><p class="muted" style="margin: 0; font-size: 15px">Satu email ringkas: tips musim ini dan artikel pilihan.</p></div>
+<form style="flex: 1 1 380px; display: flex; gap: 8px">
+<label for="em" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Email</label>
+<input id="em" placeholder="Alamat email" style="flex: 1; min-width: 0; height: 48px; border: 1px solid #DCE5DE; border-radius: 12px; padding: 0 14px; font: 15px 'Inter', sans-serif">
+<button type="button" class="btn">Langganan</button>
+</form>
+</div>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #DCE5DE; padding: 40px 0 48px">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between">
+<div style="flex: 1 1 260px"><div class="serif" style="font-size: 22px; font-weight: 700">TaniPintar</div><p class="muted" style="font-size: 14px; line-height: 1.6; max-width: 320px; margin: 8px 0 0">Pendamping tanam untuk kebun rumah dan petani pemula di Indonesia.</p></div>
+<nav aria-label="Tautan footer" style="display: flex; flex-wrap: wrap; gap: 48px; font-size: 14.5px">
+<div style="display: flex; flex-direction: column; gap: 10px"><strong>Fitur</strong><a href="KatalogBibit.html">Katalog bibit</a><a href="JadwalRawat.html">Jadwal rawat</a><a href="TanyaPenyuluh.html">Tanya penyuluh</a></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><strong>Belajar</strong><a href="PanduanDetail.html">Panduan</a><a href="Blog.html">Blog</a></div>
+</nav>
+</div>
+<div class="wrap muted" style="font-size: 13px; margin-top: 28px">© 2026 TaniPintar</div>
+</footer>
+</div>
+</template>
+<script type="text/x-dc" id="dc-script">
+class Component extends DCLogic {
+  constructor(p) { super(p); this.state = { cat: 'Semua' }; }
+  renderVals() {
+    const G = 'background:#E8F5E9', C = 'background:#FEE2E2', B = 'background:#EDF3EF', Y = 'background:#FFF8E1';
+    const all = [
+      { cat: 'Pupuk & tanah', img: 'images/blog-kompos-ember.jpg', title: 'Membuat kompos dari sisa dapur di ember bekas', ex: 'Takaran bahan hijau dan cokelat, cara membalik, dan tanda kompos sudah matang.', date: '17 Nov 2026', read: '5 menit', bg: Y },
+      { cat: 'Hama & penyakit', img: 'images/blog-pestisida-nabati.jpg', title: 'Pestisida nabati dari daun mimba dan bawang putih', ex: 'Resep sederhana, cara menyemprot yang aman, dan kapan sebaiknya dipakai.', date: '12 Nov 2026', read: '4 menit', bg: C },
+      { cat: 'Kebun kota', img: 'images/blog-hidroponik-balkon.jpg', title: 'Hidroponik sederhana untuk balkon dan pekarangan sempit', ex: 'Sistem sumbu dari botol bekas untuk selada, pakcoy, dan kangkung.', date: '8 Nov 2026', read: '7 menit', bg: B },
+      { cat: 'Musim & cuaca', img: 'images/blog-kalender-tanam-hujan.jpg', title: 'Kalender tanam sayur untuk musim hujan', ex: 'Sayur yang tahan basah dan yang sebaiknya ditunda sampai kemarau.', date: '3 Nov 2026', read: '6 menit', bg: B },
+      { cat: 'Cerita petani', img: 'images/blog-cerita-kebun-cabai.jpg', title: 'Dari halaman 3 × 4 meter jadi kebun cabai keluarga', ex: 'Pengalaman pengguna TaniPintar di Sleman menanam cabai di polibag.', date: '29 Okt 2026', read: '5 menit', bg: G },
+      { cat: 'Pupuk & tanah', img: 'images/blog-poc.jpg', title: 'Mengenal pupuk organik cair (POC) dan cara membuatnya', ex: 'Bahan yang mudah didapat, lama fermentasi, dan takaran pengenceran.', date: '24 Okt 2026', read: '6 menit', bg: Y },
+      { cat: 'Hama & penyakit', img: 'images/blog-daun-kuning.jpg', title: 'Daun kuning belum tentu kurang pupuk', ex: 'Bedakan kekurangan nitrogen, kelebihan air, dan serangan virus.', date: '18 Okt 2026', read: '5 menit', bg: C },
+      { cat: 'Kebun kota', img: 'images/blog-pot-polibag.jpg', title: 'Memilih pot dan polibag yang tepat untuk sayur buah', ex: 'Ukuran minimal untuk cabai, tomat, dan terong agar akar leluasa.', date: '11 Okt 2026', read: '4 menit', bg: G },
+      { cat: 'Cerita petani', img: 'images/blog-kelompok-tani-muda.jpg', title: 'Kelompok tani muda yang menjual sayur lewat pesan singkat', ex: 'Cara mereka mengatur jadwal panen agar pasokan stabil tiap minggu.', date: '4 Okt 2026', read: '6 menit', bg: G }
+    ];
+    const cat = this.state.cat;
+    const posts = all.filter((p) => cat === 'Semua' || p.cat === cat);
+    const cats = ['Semua', 'Musim & cuaca', 'Pupuk & tanah', 'Hama & penyakit', 'Kebun kota', 'Cerita petani'].map((label) => ({
+      label, on: label === cat, cls: label === cat ? 'chip chip-on' : 'chip', pick: () => this.setState({ cat: label })
+    }));
+    return { posts, cats };
+  }
+}
+</script>
+<script src="assets/dc-lite.js"></script>
+</body>
+</html>

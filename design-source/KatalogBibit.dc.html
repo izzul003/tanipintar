@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Katalog bibit</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F7F5;font-family:'Inter',system-ui,sans-serif;color:#132A17}
+a{color:#2E7D32}a:hover{color:#1B5E20}
+.serif{font-family:'Poppins',system-ui,sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.nav{padding:10px 14px;border-radius:10px;text-decoration:none;color:#3E5643;font-weight:500;font-size:15px}
+.nav:hover{background:#EDF3EF;color:#1B5E20}
+.nav-on{background:#E8F5E9;color:#1B5E20;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;background:#2E7D32;color:#fff;font:600 15px 'Inter',sans-serif;text-decoration:none;border:0;cursor:pointer;box-sizing:border-box}
+.btn:hover{background:#1B5E20;color:#fff}
+.btn-sun{background:#FFA000;color:#132A17}.btn-sun:hover{background:#F57C00;color:#132A17}
+.btn-line{background:transparent;color:#F4F7F5;border:1px solid rgba(255,255,255,.45)}.btn-line:hover{background:rgba(255,255,255,.1);color:#fff}
+.btn-ghost{background:#fff;color:#1B5E20;border:1px solid #DCE5DE}.btn-ghost:hover{background:#EDF3EF;color:#1B5E20}
+.card{background:#fff;border:1px solid #DCE5DE;border-radius:20px;box-sizing:border-box}
+a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-color:#81C784;color:inherit}
+.tag{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;font-size:12.5px;font-weight:600}
+.tag-siram{background:#E0F2FE;color:#0369A1}.tag-pupuk{background:#FEF3C7;color:#92400E}.tag-periksa{background:#E8F5E9;color:#1B5E20}
+.chip{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid #DCE5DE;background:#fff;color:#132A17;font:500 14px 'Inter',sans-serif;text-decoration:none;cursor:pointer}
+.chip:hover{border-color:#2E7D32;color:#1B5E20}
+.chip-on{background:#1B5E20;border-color:#1B5E20;color:#fff}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.muted{color:#3E5643}
+.link{font-weight:600;font-size:14.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:44px}
+.check{width:28px;height:28px;border-radius:50%;border:2px solid #A3B5A7;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:none;color:#fff}
+@media (max-width:720px){.wrap{padding:0 18px}h1.hero{font-size:40px !important}}
+</style>
+</helmet>
+<div style="min-height: 100vh">
+<header style="background: #FFFFFF; border-bottom: 1px solid #DCE5DE">
+<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding-top: 14px; padding-bottom: 14px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #132A17">
+<span style="width: 40px; height: 40px; border-radius: 12px; background: #2E7D32; color: #fff; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"/><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"/><path d="M12 14c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"/></svg></span>
+<span style="display: flex; flex-direction: column"><span class="serif" style="font-weight: 700; font-size: 20px; line-height: 1.1">TaniPintar</span><span style="font-size: 12px; color: #3E5643">Pendamping tanam</span></span>
+</a>
+<nav aria-label="Navigasi utama" style="display: flex; flex-wrap: wrap; gap: 2px; flex: 1 1 auto">
+<a class="nav" href="Main.dc.html">Beranda</a>
+<a class="nav nav-on" href="KatalogBibit.dc.html" aria-current="page">Katalog Bibit</a>
+<a class="nav" href="JadwalRawat.dc.html">Jadwal Rawat</a>
+<a class="nav" href="PanduanDetail.dc.html">Panduan</a>
+<a class="nav" href="Blog.dc.html">Blog</a>
+<a class="nav" href="TanyaPenyuluh.dc.html">Tanya Penyuluh</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px">
+<a class="btn" href="KatalogBibit.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Mulai tanam</a>
+<button aria-label="Akun saya" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #DCE5DE; background: #F4F7F5; font: 600 14px 'Inter', sans-serif; color: #1B5E20; cursor: pointer">RU</button>
+</div>
+</div>
+</header>
+<section style="background: #1B5E20; color: #F4F7F5; padding: 48px 0 52px">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end; justify-content: space-between">
+<div style="flex: 1 1 520px">
+<div class="eyebrow" style="color: #FFE7A8">Mulai tanam</div>
+<h1 class="serif" style="margin: 8px 0 10px; font-size: 48px; font-weight: 700; line-height: 1.05">Katalog bibit</h1>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #E8F5E9; max-width: 560px">Pilih tanaman yang cocok dengan lahan dan waktumu. Setiap bibit dilengkapi tutorial tanam dan jadwal rawat otomatis.</p>
+</div>
+<form role="search" style="flex: 1 1 380px; display: flex; gap: 8px; background: #F4F7F5; padding: 8px; border-radius: 16px">
+<label for="cari" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Cari bibit</label>
+<span style="display: flex; align-items: center; padding-left: 8px; color: #3E5643"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span>
+<input id="cari" placeholder="Cari bibit, mis. cabai, selada…" style="flex: 1; min-width: 0; height: 44px; border: 0; background: transparent; font: 15px 'Inter', sans-serif; color: #132A17">
+<button type="button" class="btn">Cari</button>
+</form>
+</div>
+</section>
+
+<section style="padding: 32px 0 72px">
+<div class="wrap">
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; margin-bottom: 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px" role="group" aria-label="Kategori">
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="5">
+<button class="{{c.cls}}" onClick="{{c.pick}}" aria-pressed="{{c.on}}">{{c.label}}</button>
+</sc-for>
+</div>
+<label style="display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; min-height: 44px; cursor: pointer"><input type="checkbox" checked="{{easy}}" onChange="{{toggleEasy}}" style="width: 20px; height: 20px; accent-color: #2E7D32">Hanya yang cocok untuk pemula</label>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center; padding: 16px 20px; border-radius: 16px; background: #E8F5E9; margin-bottom: 24px">
+<span style="color: #2E7D32; display: flex"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+<span style="flex: 1 1 300px; font-size: 15px">Lahanmu: <strong>pekarangan &amp; polibag, cahaya ±6 jam</strong>. Bibit bertanda <span class="tag" style="background: #fff; color: #2E7D32">Cocok</span> paling sesuai.</span>
+<a class="link" href="TanyaPenyuluh.dc.html">Ubah info lahan</a>
+</div>
+
+<p class="muted" style="margin: 0 0 14px; font-size: 14px">{{count}} bibit ditemukan</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px">
+<sc-for list="{{items}}" as="b" hint-placeholder-count="8">
+<a class="card" href="BibitDetail.dc.html" style="padding: 0; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 170px; position: relative; overflow: hidden; display: flex; align-items: flex-start; justify-content: space-between; padding: 16px; box-sizing: border-box; {{b.bg}}">
+<img src="{{b.img}}" alt="{{b.name}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<span class="tag" style="position: relative; background: #fff; color: #132A17">{{b.cat}}</span>
+<sc-if value="{{b.fit}}" hint-placeholder-val="{{true}}"><span class="tag" style="position: relative; background: #1B5E20; color: #fff">Cocok</span></sc-if>
+</div>
+<div style="padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+<div style="font-weight: 700; font-size: 18px">{{b.name}}</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; font-size: 13.5px">
+<div><div class="muted">Panen</div><div style="font-weight: 600">{{b.harvest}}</div></div>
+<div><div class="muted">Tingkat</div><div style="font-weight: 600">{{b.level}}</div></div>
+<div><div class="muted">Media</div><div style="font-weight: 600">{{b.media}}</div></div>
+<div><div class="muted">Cahaya</div><div style="font-weight: 600">{{b.sun}}</div></div>
+</div>
+<div style="margin-top: auto; padding-top: 8px; font-weight: 600; font-size: 14.5px; color: #2E7D32">Lihat tutorial tanam →</div>
+</div>
+</a>
+</sc-for>
+</div>
+
+<div style="margin-top: 40px; padding: 28px; border-radius: 24px; background: #fff; border: 1px solid #DCE5DE; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between">
+<div style="flex: 1 1 420px"><h2 class="serif" style="margin: 0 0 6px; font-size: 24px; font-weight: 700">Belum yakin mau tanam apa?</h2><p class="muted" style="margin: 0; font-size: 15px">Jawab 3 pertanyaan singkat soal lahan, cahaya, dan waktu luang — penyuluh akan merekomendasikan bibit.</p></div>
+<a class="btn" href="TanyaPenyuluh.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>Minta rekomendasi</a>
+</div>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #DCE5DE; padding: 40px 0 48px">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between">
+<div style="flex: 1 1 260px"><div class="serif" style="font-size: 22px; font-weight: 700">TaniPintar</div><p class="muted" style="font-size: 14px; line-height: 1.6; max-width: 320px; margin: 8px 0 0">Pendamping tanam untuk kebun rumah dan petani pemula di Indonesia.</p></div>
+<nav aria-label="Tautan footer" style="display: flex; flex-wrap: wrap; gap: 48px; font-size: 14.5px">
+<div style="display: flex; flex-direction: column; gap: 10px"><strong>Fitur</strong><a href="KatalogBibit.dc.html">Katalog bibit</a><a href="JadwalRawat.dc.html">Jadwal rawat</a><a href="TanyaPenyuluh.dc.html">Tanya penyuluh</a></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><strong>Belajar</strong><a href="PanduanDetail.dc.html">Panduan</a><a href="Blog.dc.html">Blog</a></div>
+</nav>
+</div>
+<div class="wrap muted" style="font-size: 13px; margin-top: 28px">© 2026 TaniPintar</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1700}}'>
+class Component extends DCLogic {
+  constructor(p) { super(p); this.state = { cat: 'Semua', easy: false }; }
+  renderVals() {
+    const G = 'background:#E8F5E9', C = 'background:#FEE2E2', B = 'background:#EDF3EF', Y = 'background:#FFF8E1';
+    const all = [
+      { name: 'Cabai rawit merah', img: '/_blob/76a440b5428ca101a30015c9c1b6a4a4', cat: 'Sayur buah', harvest: '± 90 hari', level: 'Sedang', media: 'Polibag', sun: 'Penuh', bg: C, fit: true },
+      { name: 'Tomat cherry', img: '/_blob/9413b340f10b8e76b7193444c39366be', cat: 'Sayur buah', harvest: '± 75 hari', level: 'Sedang', media: 'Polibag', sun: 'Penuh', bg: C, fit: true },
+      { name: 'Selada romaine', img: '/_blob/8a26ee6f1f3b676325f1572692466e87', cat: 'Sayur daun', harvest: '± 45 hari', level: 'Pemula', media: 'Polibag, hidroponik', sun: 'Sebagian', bg: G, fit: true },
+      { name: 'Kangkung darat', img: '/_blob/f08e1b81b08069e764afc9c022670e1d', cat: 'Sayur daun', harvest: '± 25–30 hari', level: 'Pemula', media: 'Bedengan, polibag', sun: 'Penuh', bg: G, fit: true },
+      { name: 'Bayam hijau', img: '/_blob/6eb60c906f81728f7dbada3c74050278', cat: 'Sayur daun', harvest: '± 25–30 hari', level: 'Pemula', media: 'Bedengan', sun: 'Penuh', bg: G, fit: false },
+      { name: 'Pakcoy', img: '/_blob/1e8390fb6ddf7c2f63a2a9140bdf5793', cat: 'Sayur daun', harvest: '± 40 hari', level: 'Pemula', media: 'Hidroponik, polibag', sun: 'Sebagian', bg: B, fit: true },
+      { name: 'Terong ungu', img: '/_blob/2d1d2315d82fe0442394ec129110fa85', cat: 'Sayur buah', harvest: '± 85 hari', level: 'Sedang', media: 'Polibag besar', sun: 'Penuh', bg: C, fit: false },
+      { name: 'Kemangi', img: '/_blob/aabb7fdd0f3c89d794195a95aa76c040', cat: 'Rempah', harvest: '± 40 hari', level: 'Pemula', media: 'Pot, polibag', sun: 'Penuh', bg: Y, fit: true },
+      { name: 'Daun bawang', img: '/_blob/91efda0fe5bc8811d698d7aecc838d17', cat: 'Rempah', harvest: '± 60 hari', level: 'Pemula', media: 'Pot, bedengan', sun: 'Sebagian', bg: Y, fit: true }
+    ];
+    const { cat, easy } = this.state;
+    const items = all.filter((b) => (cat === 'Semua' || b.cat === cat) && (!easy || b.level === 'Pemula'));
+    const cats = ['Semua', 'Sayur daun', 'Sayur buah', 'Rempah'].map((label) => ({
+      label, on: label === cat, cls: label === cat ? 'chip chip-on' : 'chip', pick: () => this.setState({ cat: label })
+    }));
+    return { items, cats, count: items.length, easy, toggleEasy: () => this.setState({ easy: !easy }) };
+  }
+}
+</script>
+</body>
+</html>

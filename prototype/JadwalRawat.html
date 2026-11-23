@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jadwal rawat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F7F5;font-family:'Inter',system-ui,sans-serif;color:#132A17}
+a{color:#2E7D32}a:hover{color:#1B5E20}
+.serif{font-family:'Poppins',system-ui,sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.nav{padding:10px 14px;border-radius:10px;text-decoration:none;color:#3E5643;font-weight:500;font-size:15px}
+.nav:hover{background:#EDF3EF;color:#1B5E20}
+.nav-on{background:#E8F5E9;color:#1B5E20;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;background:#2E7D32;color:#fff;font:600 15px 'Inter',sans-serif;text-decoration:none;border:0;cursor:pointer;box-sizing:border-box}
+.btn:hover{background:#1B5E20;color:#fff}
+.btn-sun{background:#FFA000;color:#132A17}.btn-sun:hover{background:#F57C00;color:#132A17}
+.btn-line{background:transparent;color:#F4F7F5;border:1px solid rgba(255,255,255,.45)}.btn-line:hover{background:rgba(255,255,255,.1);color:#fff}
+.btn-ghost{background:#fff;color:#1B5E20;border:1px solid #DCE5DE}.btn-ghost:hover{background:#EDF3EF;color:#1B5E20}
+.card{background:#fff;border:1px solid #DCE5DE;border-radius:20px;box-sizing:border-box}
+a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-color:#81C784;color:inherit}
+.tag{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;font-size:12.5px;font-weight:600}
+.tag-siram{background:#E0F2FE;color:#0369A1}.tag-pupuk{background:#FEF3C7;color:#92400E}.tag-periksa{background:#E8F5E9;color:#1B5E20}
+.chip{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid #DCE5DE;background:#fff;color:#132A17;font:500 14px 'Inter',sans-serif;text-decoration:none;cursor:pointer}
+.chip:hover{border-color:#2E7D32;color:#1B5E20}
+.chip-on{background:#1B5E20;border-color:#1B5E20;color:#fff}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.muted{color:#3E5643}
+.link{font-weight:600;font-size:14.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:44px}
+.check{width:28px;height:28px;border-radius:50%;border:2px solid #A3B5A7;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:none;color:#fff}
+@media (max-width:720px){.wrap{padding:0 18px}h1.hero{font-size:40px !important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<template id="dc-tpl">
+<div style="min-height: 100vh">
+<header style="background: #FFFFFF; border-bottom: 1px solid #DCE5DE">
+<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding-top: 14px; padding-bottom: 14px">
+<a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #132A17">
+<span style="width: 40px; height: 40px; border-radius: 12px; background: #2E7D32; color: #fff; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"/><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"/><path d="M12 14c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"/></svg></span>
+<span style="display: flex; flex-direction: column"><span class="serif" style="font-weight: 700; font-size: 20px; line-height: 1.1">TaniPintar</span><span style="font-size: 12px; color: #3E5643">Pendamping tanam</span></span>
+</a>
+<nav aria-label="Navigasi utama" style="display: flex; flex-wrap: wrap; gap: 2px; flex: 1 1 auto">
+<a class="nav" href="index.html">Beranda</a>
+<a class="nav" href="KatalogBibit.html">Katalog Bibit</a>
+<a class="nav nav-on" href="JadwalRawat.html" aria-current="page">Jadwal Rawat</a>
+<a class="nav" href="PanduanDetail.html">Panduan</a>
+<a class="nav" href="Blog.html">Blog</a>
+<a class="nav" href="TanyaPenyuluh.html">Tanya Penyuluh</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px">
+<a class="btn" href="KatalogBibit.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Mulai tanam</a>
+<button aria-label="Akun saya" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #DCE5DE; background: #F4F7F5; font: 600 14px 'Inter', sans-serif; color: #1B5E20; cursor: pointer">RU</button>
+</div>
+</div>
+</header>
+<section style="padding: 36px 0 20px">
+<div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
+<div>
+<a class="link" href="index.html" style="min-height: 32px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Beranda</a>
+<h1 class="serif" style="margin: 6px 0 6px; font-size: 44px; font-weight: 700">Jadwal rawat</h1>
+<p class="muted" style="margin: 0; font-size: 16px">Minggu ini · 23–29 November 2026 · disesuaikan dengan fase dan cuaca</p>
+</div>
+<div style="display: flex; gap: 10px; flex-wrap: wrap">
+<button class="btn btn-ghost"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Ekspor ke kalender</button>
+<a class="btn" href="TanamanDetail.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Catat perawatan</a>
+</div>
+</div>
+</section>
+
+<section style="padding: 8px 0 72px">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+<div style="flex: 999 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div role="tablist" aria-label="Pilih hari" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; overflow-x: auto">
+<sc-for list="{{days}}" as="d" hint-placeholder-count="7">
+<button role="tab" aria-selected="{{d.sel}}" onClick="{{d.pick}}" style="min-width: 72px; padding: 14px 6px; border-radius: 16px; border: 1px solid #DCE5DE; cursor: pointer; font-family: 'Inter', sans-serif; display: flex; flex-direction: column; align-items: center; gap: 4px; {{d.style}}">
+<span style="font-size: 13px; font-weight: 600; opacity: .8">{{d.dow}}</span>
+<span class="serif" style="font-size: 26px; font-weight: 700">{{d.date}}</span>
+<span style="font-size: 12px; opacity: .85">{{d.count}} tugas</span>
+</button>
+</sc-for>
+</div>
+
+<div class="card" style="padding: 26px 28px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
+<div>
+<h2 class="serif" style="margin: 0; font-size: 26px; font-weight: 700">{{dayTitle}}</h2>
+<div style="display: flex; align-items: center; gap: 8px; margin-top: 6px; font-size: 14.5px; color: #3E5643"><span style="color: #D97706; display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span>{{weather}}</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px" role="group" aria-label="Filter jenis tugas">
+<sc-for list="{{filters}}" as="f" hint-placeholder-count="4">
+<button class="{{f.cls}}" onClick="{{f.pick}}" aria-pressed="{{f.on}}">{{f.label}}</button>
+</sc-for>
+</div>
+</div>
+<sc-if value="{{rainNote}}" hint-placeholder-val="{{false}}">
+<div style="margin-top: 16px; padding: 12px 16px; border-radius: 12px; background: #E0F2FE; color: #0369A1; font-size: 14.5px; display: flex; gap: 10px; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>Hujan diperkirakan sore ini — siram sore selada otomatis dilewati.</div>
+</sc-if>
+<div style="margin-top: 8px">
+<sc-for list="{{tasks}}" as="t" hint-placeholder-count="4">
+<div style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 0; border-top: 1px solid #EDF3EF">
+<button class="check" onClick="{{t.toggle}}" aria-label="Tandai selesai: {{t.plant}}" style="{{t.boxStyle}}">
+<sc-if value="{{t.done}}" hint-placeholder-val="{{false}}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></sc-if>
+</button>
+<div style="flex: 1; min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<span style="font-size: 14px; color: #3E5643; width: 44px">{{t.time}}</span>
+<span class="{{t.tagClass}}">{{t.type}}</span>
+<a href="TanamanDetail.html" style="font-weight: 600; font-size: 16.5px; color: #132A17; text-decoration: none; {{t.titleStyle}}">{{t.plant}}</a>
+</div>
+<div class="muted" style="font-size: 14.5px; margin-top: 6px; padding-left: 54px">{{t.note}}</div>
+</div>
+</div>
+</sc-for>
+<sc-if value="{{empty}}" hint-placeholder-val="{{false}}">
+<div class="muted" style="padding: 32px 0; text-align: center; border-top: 1px solid #EDF3EF">Tidak ada tugas jenis ini di hari terpilih.</div>
+</sc-if>
+</div>
+</div>
+</div>
+
+<aside style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div class="card" style="padding: 24px">
+<h2 style="margin: 0 0 14px; font-size: 18px; font-weight: 700">Ringkasan minggu ini</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+<div style="padding: 14px; border-radius: 14px; background: #E0F2FE; color: #0369A1"><div class="serif" style="font-size: 28px; font-weight: 700">{{wk.siram}}</div><div style="font-size: 13px; font-weight: 600">Siram</div></div>
+<div style="padding: 14px; border-radius: 14px; background: #FEF3C7; color: #92400E"><div class="serif" style="font-size: 28px; font-weight: 700">{{wk.pupuk}}</div><div style="font-size: 13px; font-weight: 600">Pupuk</div></div>
+<div style="padding: 14px; border-radius: 14px; background: #E8F5E9; color: #2E7D32"><div class="serif" style="font-size: 28px; font-weight: 700">{{wk.periksa}}</div><div style="font-size: 13px; font-weight: 600">Periksa</div></div>
+</div>
+</div>
+<div class="card" style="padding: 24px">
+<h2 style="margin: 0 0 4px; font-size: 18px; font-weight: 700; display: flex; gap: 8px; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg>Pengingat</h2>
+<p class="muted" style="margin: 0 0 14px; font-size: 14px">Dikirim 15 menit sebelum jadwal.</p>
+<label style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-top: 1px solid #EDF3EF; font-size: 15px">Notifikasi aplikasi<input type="checkbox" checked style="width: 22px; height: 22px; accent-color: #2E7D32"></label>
+<label style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-top: 1px solid #EDF3EF; font-size: 15px">Pesan WhatsApp<input type="checkbox" style="width: 22px; height: 22px; accent-color: #2E7D32"></label>
+<label style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-top: 1px solid #EDF3EF; font-size: 15px">Lewati siram saat hujan<input type="checkbox" checked style="width: 22px; height: 22px; accent-color: #2E7D32"></label>
+</div>
+<div style="padding: 24px; border-radius: 20px; background: #FFF8E1; border: 1px solid #FFE7A8">
+<div class="eyebrow" style="color: #92400E">Kenapa jam segini?</div>
+<p style="margin: 10px 0 4px; font-size: 15px; line-height: 1.6">Siram pagi sebelum 08.00 memberi akar waktu menyerap air sebelum terik. Siram sore hanya untuk tanaman daun di hari panas.</p>
+<a class="link" href="PanduanDetail.html" style="color: #92400E">Baca panduan menyiram →</a>
+</div>
+</aside>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #DCE5DE; padding: 40px 0 48px">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between">
+<div style="flex: 1 1 260px"><div class="serif" style="font-size: 22px; font-weight: 700">TaniPintar</div><p class="muted" style="font-size: 14px; line-height: 1.6; max-width: 320px; margin: 8px 0 0">Pendamping tanam untuk kebun rumah dan petani pemula di Indonesia.</p></div>
+<nav aria-label="Tautan footer" style="display: flex; flex-wrap: wrap; gap: 48px; font-size: 14.5px">
+<div style="display: flex; flex-direction: column; gap: 10px"><strong>Fitur</strong><a href="KatalogBibit.html">Katalog bibit</a><a href="JadwalRawat.html">Jadwal rawat</a><a href="TanyaPenyuluh.html">Tanya penyuluh</a></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><strong>Belajar</strong><a href="PanduanDetail.html">Panduan</a><a href="Blog.html">Blog</a></div>
+</nav>
+</div>
+<div class="wrap muted" style="font-size: 13px; margin-top: 28px">© 2026 TaniPintar</div>
+</footer>
+</div>
+</template>
+<script type="text/x-dc" id="dc-script">
+class Component extends DCLogic {
+  constructor(p) { super(p); this.state = { day: 0, filter: 'Semua', done: {} }; }
+  week() {
+    const S = (time, plant, note) => ({ time, type: 'Siram', plant, note });
+    const P = (time, plant, note) => ({ time, type: 'Pupuk', plant, note });
+    const C = (time, plant, note) => ({ time, type: 'Periksa', plant, note });
+    const cabai = S('06.30', 'Cabai rawit merah', '300 ml per polibag, siram ke pangkal batang');
+    const tomat = S('06.45', 'Tomat cherry', '350 ml per polibag, jangan basahi daun');
+    const selada = S('17.00', 'Selada romaine', '200 ml, hindari membasahi daun agar tidak busuk');
+    return [
+      { dow: 'Sen', date: 23, title: 'Senin, 23 November', weather: '29°C · cerah berawan, hujan sore kemungkinan rendah', rain: false, tasks: [
+        cabai, P('07.00', 'Tomat cherry', 'Pupuk kandang sapi 100 g, tabur 5 cm dari batang'),
+        C('16.30', 'Kangkung darat', 'Cek ulat daun di bagian bawah, buang yang ada telur'), selada] },
+      { dow: 'Sel', date: 24, title: 'Selasa, 24 November', weather: '30°C · cerah', rain: false, tasks: [
+        cabai, tomat, C('16.30', 'Cabai rawit merah', 'Cek thrips di bawah daun dan bunga'), selada] },
+      { dow: 'Rab', date: 25, title: 'Rabu, 25 November', weather: '27°C · hujan sore', rain: true, tasks: [
+        cabai, tomat, P('07.15', 'Selada romaine', 'Pupuk organik cair 1:10, kocor ke tanah')] },
+      { dow: 'Kam', date: 26, title: 'Kamis, 26 November', weather: '29°C · berawan', rain: false, tasks: [
+        cabai, tomat, C('16.00', 'Tomat cherry', 'Buang tunas air di ketiak daun'), selada] },
+      { dow: 'Jum', date: 27, title: 'Jumat, 27 November', weather: '30°C · cerah', rain: false, tasks: [
+        cabai, P('07.00', 'Cabai rawit merah', 'Pupuk tinggi kalium, 200 ml per polibag'), tomat, selada] },
+      { dow: 'Sab', date: 28, title: 'Sabtu, 28 November', weather: '28°C · cerah berawan', rain: false, tasks: [
+        cabai, tomat, C('08.00', 'Kangkung darat', 'Cek kesiapan panen pertama'), selada] },
+      { dow: 'Min', date: 29, title: 'Minggu, 29 November', weather: '29°C · cerah', rain: false, tasks: [
+        cabai, tomat, C('09.00', 'Semua tanaman', 'Foto mingguan dan cek kondisi media'), selada] }
+    ];
+  }
+  renderVals() {
+    const wk = this.week();
+    const { day, filter, done } = this.state;
+    const days = wk.map((d, i) => ({
+      dow: d.dow, date: d.date, count: d.tasks.length, sel: i === day,
+      style: i === day ? 'background:#1B5E20;color:#fff;border-color:#1B5E20' : 'background:#fff;color:#132A17',
+      pick: () => this.setState({ day: i })
+    }));
+    const cur = wk[day];
+    const tasks = cur.tasks.filter((t) => filter === 'Semua' || t.type === filter).map((t) => {
+      const key = day + '-' + t.time + t.plant;
+      const d = !!done[key];
+      return Object.assign({}, t, {
+        done: d, tagClass: 'tag tag-' + t.type.toLowerCase(),
+        boxStyle: d ? 'background:#2E7D32;border-color:#2E7D32' : '',
+        titleStyle: d ? 'text-decoration: line-through; color: #6E8573' : '',
+        toggle: () => this.setState({ done: Object.assign({}, done, { [key]: !d }) })
+      });
+    });
+    const filters = ['Semua', 'Siram', 'Pupuk', 'Periksa'].map((label) => ({
+      label, on: label === filter, cls: label === filter ? 'chip chip-on' : 'chip',
+      pick: () => this.setState({ filter: label })
+    }));
+    const all = wk.reduce((a, d) => a.concat(d.tasks), []);
+    const n = (ty) => all.filter((t) => t.type === ty).length;
+    return { days, tasks, filters, dayTitle: cur.title, weather: cur.weather, rainNote: cur.rain, empty: tasks.length === 0,
+      wk: { siram: n('Siram'), pupuk: n('Pupuk'), periksa: n('Periksa') } };
+  }
+}
+</script>
+<script src="assets/dc-lite.js"></script>
+</body>
+</html>

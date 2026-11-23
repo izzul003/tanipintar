@@ -1,0 +1,15 @@
+{"v":3,"createdOnFiles":{"v":1,"at":"2026-11-23T03:00:00Z"},"title":"TaniPintar","launch":{"view":"canvas"},"pages":[],"boards":{
+"Main.dc.html":{"x":0,"y":0,"w":1440,"h":3300,"title":"Beranda","expand":"fill","is_interactive":true},
+"TanamanDetail.dc.html":{"x":1520,"y":0,"w":1440,"h":2750,"title":"Detail tanaman — Cabai rawit merah","expand":"fill","is_interactive":true},
+"JadwalRawat.dc.html":{"x":3040,"y":0,"w":1440,"h":1750,"title":"Jadwal rawat","expand":"fill","is_interactive":true},
+"TanyaPenyuluh.dc.html":{"x":4560,"y":0,"w":1440,"h":1350,"title":"Tanya penyuluh","expand":"fill","is_interactive":true},
+"KatalogBibit.dc.html":{"x":0,"y":3720,"w":1440,"h":1700,"title":"Katalog bibit","expand":"fill","is_interactive":true},
+"BibitDetail.dc.html":{"x":1520,"y":3720,"w":1440,"h":3000,"title":"Tutorial tanam — Tomat cherry","expand":"fill","is_interactive":true},
+"PanduanDetail.dc.html":{"x":3040,"y":3720,"w":1440,"h":2150,"title":"Panduan — Jam terbaik menyiram","expand":"fill","is_interactive":true},
+"Blog.dc.html":{"x":4560,"y":3720,"w":1440,"h":1950,"title":"Blog pertanian","expand":"fill","is_interactive":true},
+"BlogDetail.dc.html":{"x":6080,"y":3720,"w":1440,"h":2350,"title":"Artikel blog","expand":"fill","is_interactive":true}
+},"order":["Main.dc.html","TanamanDetail.dc.html","JadwalRawat.dc.html","TanyaPenyuluh.dc.html","KatalogBibit.dc.html","BibitDetail.dc.html","PanduanDetail.dc.html","Blog.dc.html","BlogDetail.dc.html"],
+"notes":{
+"row1":{"x":0,"y":-320,"text":"Beranda & kebunku — rawat harian","kind":"title1","maxW":5960},
+"row2":{"x":0,"y":3400,"text":"Mulai tanam & belajar — katalog, tutorial, panduan, blog","kind":"title1","maxW":7520}
+},"designSystems":[]}

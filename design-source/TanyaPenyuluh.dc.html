@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Tanya penyuluh</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F7F5;font-family:'Inter',system-ui,sans-serif;color:#132A17}
+a{color:#2E7D32}a:hover{color:#1B5E20}
+.serif{font-family:'Poppins',system-ui,sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.nav{padding:10px 14px;border-radius:10px;text-decoration:none;color:#3E5643;font-weight:500;font-size:15px}
+.nav:hover{background:#EDF3EF;color:#1B5E20}
+.nav-on{background:#E8F5E9;color:#1B5E20;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;background:#2E7D32;color:#fff;font:600 15px 'Inter',sans-serif;text-decoration:none;border:0;cursor:pointer;box-sizing:border-box}
+.btn:hover{background:#1B5E20;color:#fff}
+.btn-sun{background:#FFA000;color:#132A17}.btn-sun:hover{background:#F57C00;color:#132A17}
+.btn-line{background:transparent;color:#F4F7F5;border:1px solid rgba(255,255,255,.45)}.btn-line:hover{background:rgba(255,255,255,.1);color:#fff}
+.btn-ghost{background:#fff;color:#1B5E20;border:1px solid #DCE5DE}.btn-ghost:hover{background:#EDF3EF;color:#1B5E20}
+.card{background:#fff;border:1px solid #DCE5DE;border-radius:20px;box-sizing:border-box}
+a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-color:#81C784;color:inherit}
+.tag{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;font-size:12.5px;font-weight:600}
+.tag-siram{background:#E0F2FE;color:#0369A1}.tag-pupuk{background:#FEF3C7;color:#92400E}.tag-periksa{background:#E8F5E9;color:#1B5E20}
+.chip{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid #DCE5DE;background:#fff;color:#132A17;font:500 14px 'Inter',sans-serif;text-decoration:none;cursor:pointer}
+.chip:hover{border-color:#2E7D32;color:#1B5E20}
+.chip-on{background:#1B5E20;border-color:#1B5E20;color:#fff}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.muted{color:#3E5643}
+.link{font-weight:600;font-size:14.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:44px}
+.check{width:28px;height:28px;border-radius:50%;border:2px solid #A3B5A7;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:none;color:#fff}
+@media (max-width:720px){.wrap{padding:0 18px}h1.hero{font-size:40px !important}}
+</style>
+</helmet>
+<div style="min-height: 100vh">
+<header style="background: #FFFFFF; border-bottom: 1px solid #DCE5DE">
+<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding-top: 14px; padding-bottom: 14px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #132A17">
+<span style="width: 40px; height: 40px; border-radius: 12px; background: #2E7D32; color: #fff; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"/><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"/><path d="M12 14c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"/></svg></span>
+<span style="display: flex; flex-direction: column"><span class="serif" style="font-weight: 700; font-size: 20px; line-height: 1.1">TaniPintar</span><span style="font-size: 12px; color: #3E5643">Pendamping tanam</span></span>
+</a>
+<nav aria-label="Navigasi utama" style="display: flex; flex-wrap: wrap; gap: 2px; flex: 1 1 auto">
+<a class="nav" href="Main.dc.html">Beranda</a>
+<a class="nav" href="KatalogBibit.dc.html">Katalog Bibit</a>
+<a class="nav" href="JadwalRawat.dc.html">Jadwal Rawat</a>
+<a class="nav" href="PanduanDetail.dc.html">Panduan</a>
+<a class="nav" href="Blog.dc.html">Blog</a>
+<a class="nav nav-on" href="TanyaPenyuluh.dc.html" aria-current="page">Tanya Penyuluh</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px">
+<a class="btn" href="KatalogBibit.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Mulai tanam</a>
+<button aria-label="Akun saya" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #DCE5DE; background: #F4F7F5; font: 600 14px 'Inter', sans-serif; color: #1B5E20; cursor: pointer">RU</button>
+</div>
+</div>
+</header>
+<section style="padding: 28px 0 56px">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch">
+
+<aside class="card" style="flex: 1 1 260px; min-width: 0; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<a class="btn" href="TanyaPenyuluh.dc.html" style="justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Percakapan baru</a>
+<div class="eyebrow muted" style="margin-top: 6px">Riwayat</div>
+<nav aria-label="Riwayat percakapan" style="display: flex; flex-direction: column; gap: 4px">
+<a href="TanyaPenyuluh.dc.html" style="padding: 12px 14px; border-radius: 12px; background: #E8F5E9; color: #1B5E20; text-decoration: none"><div style="font-weight: 600; font-size: 14.5px">Siram &amp; daun cabai menggulung</div><div style="font-size: 12.5px; color: #3E5643">Hari ini · Cabai rawit merah</div></a>
+<a href="TanyaPenyuluh.dc.html" style="padding: 12px 14px; border-radius: 12px; color: #132A17; text-decoration: none"><div style="font-weight: 600; font-size: 14.5px">Kapan pupuk tomat pertama?</div><div class="muted" style="font-size: 12.5px">20 Nov · Tomat cherry</div></a>
+<a href="TanyaPenyuluh.dc.html" style="padding: 12px 14px; border-radius: 12px; color: #132A17; text-decoration: none"><div style="font-weight: 600; font-size: 14.5px">Selada pahit, kenapa?</div><div class="muted" style="font-size: 12.5px">14 Nov · Selada romaine</div></a>
+<a href="TanyaPenyuluh.dc.html" style="padding: 12px 14px; border-radius: 12px; color: #132A17; text-decoration: none"><div style="font-weight: 600; font-size: 14.5px">Bibit untuk pemula</div><div class="muted" style="font-size: 12.5px">28 Okt</div></a>
+</nav>
+</aside>
+
+<div class="card" style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; overflow: hidden">
+<div style="padding: 18px 24px; border-bottom: 1px solid #EDF3EF; display: flex; align-items: center; gap: 12px">
+<span style="width: 44px; height: 44px; border-radius: 50%; background: #2E7D32; color: #fff; display: flex; align-items: center; justify-content: center; flex: none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span>
+<div style="flex: 1"><h1 style="margin: 0; font-size: 18px; font-weight: 700">Tanya penyuluh</h1><div class="muted" style="font-size: 13.5px">Jawaban sesuai fase tanamanmu</div></div>
+<span class="tag tag-periksa">Konteks: Cabai · hari ke-26</span>
+</div>
+<div style="flex: 1; padding: 24px; display: flex; flex-direction: column; gap: 18px; background: #F4F7F5">
+<div style="align-self: flex-start; max-width: 80%; padding: 14px 16px; background: #EDF3EF; border-radius: 4px 16px 16px 16px; font-size: 15px; line-height: 1.6">Selamat pagi. Saya siap membantu soal tanam dan rawat. Mau mulai dari mana?</div>
+<div style="align-self: flex-end; max-width: 75%; padding: 14px 16px; background: #1B5E20; color: #fff; border-radius: 16px 4px 16px 16px; font-size: 15px; line-height: 1.6">Jam berapa sebaiknya siram cabai yang sedang berbunga?</div>
+<div style="align-self: flex-start; max-width: 85%; display: flex; flex-direction: column; gap: 10px">
+<div style="padding: 16px 18px; background: #fff; border: 1px solid #DCE5DE; border-radius: 4px 16px 16px 16px; font-size: 15px; line-height: 1.65">Untuk cabai rawit di fase berbunga, siram <strong>pagi pukul 06.00–08.00</strong> sekitar 300 ml per polibag, langsung ke pangkal batang. Siram sore hanya jika tanah terasa kering saat dicek 2 ruas jari. Hindari siang — tetes air pada bunga saat terik bisa memicu bunga rontok.</div>
+<div style="display: flex; gap: 12px; align-items: center; padding: 12px 14px; border-radius: 14px; background: #E0F2FE; color: #0369A1; font-size: 14px"><span style="display: flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span style="flex: 1"><strong>Sudah diatur:</strong> siram cabai setiap hari pukul 06.30</span><a href="JadwalRawat.dc.html" style="color: #0369A1; font-weight: 600">Lihat jadwal</a></div>
+</div>
+<div style="align-self: flex-end; max-width: 75%; display: flex; flex-direction: column; gap: 8px; align-items: flex-end">
+<img src="/_blob/2ee1837ec3425b4730261f68fdd7131f" alt="Foto daun cabai menggulung yang dikirim pengguna" style="width: 240px; height: 170px; border-radius: 14px; object-fit: cover; display: block">
+<div style="padding: 14px 16px; background: #1B5E20; color: #fff; border-radius: 16px 4px 16px 16px; font-size: 15px; line-height: 1.6">Daunnya ada yang menggulung ke atas, kenapa ya?</div>
+</div>
+<div style="align-self: flex-start; max-width: 85%; padding: 16px 18px; background: #fff; border: 1px solid #DCE5DE; border-radius: 4px 16px 16px 16px; font-size: 15px; line-height: 1.65">
+Daun menggulung ke atas dengan bercak keperakan biasanya tanda <strong>thrips</strong>. Coba langkah ini:
+<ol style="margin: 10px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px">
+<li>Balik daun dan cek serangga kecil memanjang di bagian bawah.</li>
+<li>Pasang perangkap kuning di dekat polibag.</li>
+<li>Semprot pestisida nabati sore hari, ulangi 3 hari sekali.</li>
+</ol>
+<div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px"><a class="chip" href="PanduanDetail.dc.html">Panduan kenali hama</a><a class="chip" href="BlogDetail.dc.html">Resep pestisida nabati</a></div>
+</div>
+</div>
+<div style="padding: 14px 20px 18px; border-top: 1px solid #EDF3EF; background: #fff">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px">
+<button class="chip">Jam siram cabai?</button><button class="chip">Pupuk fase berbunga</button><button class="chip">Daun menggulung</button><button class="chip">Bibit untuk pemula</button>
+</div>
+<form style="display: flex; gap: 8px; align-items: center">
+<button type="button" aria-label="Lampirkan foto" style="width: 48px; height: 48px; border-radius: 12px; border: 1px solid #DCE5DE; background: #fff; color: #2E7D32; display: flex; align-items: center; justify-content: center; cursor: pointer; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 8"/></svg></button>
+<label for="q" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Pertanyaan</label>
+<input id="q" placeholder="Contoh: kapan pupuk tomat?" style="flex: 1; min-width: 0; height: 48px; border: 1px solid #DCE5DE; border-radius: 12px; padding: 0 14px; font: 15px 'Inter', sans-serif">
+<button type="button" aria-label="Rekam suara" style="width: 48px; height: 48px; border-radius: 12px; border: 1px solid #DCE5DE; background: #fff; color: #2E7D32; display: flex; align-items: center; justify-content: center; cursor: pointer; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+<button type="button" class="btn" aria-label="Kirim" style="width: 48px; height: 48px; padding: 0; justify-content: center; flex: none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+</form>
+<p class="muted" style="margin: 10px 0 0; font-size: 12.5px">Jawaban otomatis berdasarkan data tanamanmu. Kasus yang perlu dicek langsung diteruskan ke penyuluh lapangan.</p>
+</div>
+</div>
+
+<aside style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<a class="card" href="TanamanDetail.dc.html" style="padding: 20px">
+<div class="eyebrow muted">Tanaman dibahas</div>
+<div style="display: flex; gap: 12px; align-items: center; margin-top: 12px"><span style="width: 44px; height: 44px; border-radius: 12px; background: #E8F5E9; color: #2E7D32; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9"/><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"/><path d="M12 14c0-3-2.5-5.5-7-5.5 0 3 2.5 5.5 7 5.5z"/></svg></span><div><div style="font-weight: 700">Cabai rawit merah</div><div class="muted" style="font-size: 13px">Hari ke-26 · berbunga</div></div></div>
+<div style="height: 6px; border-radius: 99px; background: #EDF3EF; margin-top: 14px"><div style="width: 29%; height: 100%; background: #2E7D32; border-radius: 99px"></div></div>
+</a>
+<div class="card" style="padding: 20px">
+<div class="eyebrow muted">Ganti tanaman</div>
+<div style="display: flex; flex-direction: column; gap: 8px; margin-top: 12px">
+<button class="chip" style="justify-content: flex-start">Tomat cherry · berbuah</button>
+<button class="chip" style="justify-content: flex-start">Selada romaine · daun muda</button>
+</div>
+</div>
+<div style="padding: 20px; border-radius: 20px; background: #FFF8E1; border: 1px solid #FFE7A8">
+<div class="eyebrow" style="color: #92400E">Butuh dicek langsung?</div>
+<p style="margin: 8px 0 4px; font-size: 14.5px; line-height: 1.6">Jadwalkan kunjungan atau video call dengan penyuluh lapangan di wilayahmu.</p>
+<a class="link" href="TanyaPenyuluh.dc.html" style="color: #92400E">Hubungi penyuluh →</a>
+</div>
+</aside>
+</div>
+</section>
+
+<footer style="border-top: 1px solid #DCE5DE; padding: 40px 0 48px">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between">
+<div style="flex: 1 1 260px"><div class="serif" style="font-size: 22px; font-weight: 700">TaniPintar</div><p class="muted" style="font-size: 14px; line-height: 1.6; max-width: 320px; margin: 8px 0 0">Pendamping tanam untuk kebun rumah dan petani pemula di Indonesia.</p></div>
+<nav aria-label="Tautan footer" style="display: flex; flex-wrap: wrap; gap: 48px; font-size: 14.5px">
+<div style="display: flex; flex-direction: column; gap: 10px"><strong>Fitur</strong><a href="KatalogBibit.dc.html">Katalog bibit</a><a href="JadwalRawat.dc.html">Jadwal rawat</a><a href="TanyaPenyuluh.dc.html">Tanya penyuluh</a></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><strong>Belajar</strong><a href="PanduanDetail.dc.html">Panduan</a><a href="Blog.dc.html">Blog</a></div>
+</nav>
+</div>
+<div class="wrap muted" style="font-size: 13px; margin-top: 28px">© 2026 TaniPintar</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1350}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
