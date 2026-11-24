@@ -419,6 +419,10 @@ a.card:hover {
   padding-top: 0;
 }
 
+.section--after-heading {
+  padding-top: var(--space-7);
+}
+
 .page-title {
   font-size: clamp(36px, 4vw, 48px);
   line-height: 1.1;
@@ -575,6 +579,10 @@ a.card:hover {
 
   .section--flush-top {
     padding-top: 0;
+  }
+
+  .section--after-heading {
+    padding-top: var(--space-5);
   }
 
   h2.serif {
