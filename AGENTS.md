@@ -68,7 +68,7 @@ Conventions:
 - Task type colors are semantic: Siram = blue, Pupuk = amber, Periksa = green (`.tag-siram`, `.tag-pupuk`, `.tag-periksa`).
 - Do not use light blue decoratively; it is reserved for water/rain.
 - Accessibility: text contrast ≥ 4.5:1, touch targets ≥ 44px, real `<button>`/`<a>`/`<label>`.
-- Icons are inline stroke SVGs (24×24 viewBox, stroke-width ~1.8). No emoji.
+- Icons use [Lucide](https://lucide.dev) via `<i data-lucide="…">` placeholders (24×24 viewBox, stroke-width ~1.8). `dc-lite.js` renders them after every update; colors inherit from the parent through `currentColor`. No emoji.
 - Layout: max-width 1240px container (`.wrap`), cards with 20px radius, responsive (stack on phones).
 - Date/time format: "23 November 2026", "06.30".
 

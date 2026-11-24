@@ -1,0 +1,5 @@
+/* Lucide inherits the semantic color of its parent through currentColor. */
+.lucide {
+  flex: 0 0 auto;
+  vertical-align: middle;
+}

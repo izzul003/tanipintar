@@ -83,6 +83,12 @@
     out.appendChild(el);
   }
 
+  function renderLucideIcons(root) {
+    if (window.lucide) {
+      window.lucide.createIcons({ root, attrs: { 'stroke-width': 1.8 } });
+    }
+  }
+
   document.addEventListener('submit', (e) => e.preventDefault());
   function boot() {
     const tpl = document.getElementById('dc-tpl');
@@ -95,6 +101,7 @@
       const vals = inst.renderVals() || {};
       tpl.content.childNodes.forEach((c) => build(c, vals, frag));
       app.replaceChildren(frag);
+      renderLucideIcons(app);
     };
     inst.__render();
     if (inst.componentDidMount) inst.componentDidMount();

@@ -39,4 +39,5 @@ Folder `prototype/` adalah situs statis. Tidak perlu build.
 ## Catatan
 
 - Data di prototype adalah contoh. Takaran pupuk, lama panen, dan pH perlu ditinjau penyuluh.
+- Ikon memakai [Lucide](https://lucide.dev) 1.78.0 melalui CDN, sehingga memerlukan koneksi internet saat pertama dimuat.
 - Lihat `prototype/images/sumber.csv`: sebagian foto masih "Perlu verifikasi lisensi" sebelum dipakai publik.
