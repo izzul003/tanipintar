@@ -7,45 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/icons.css">
-<style>
-body{margin:0;background:#F4F7F5;font-family:'Inter',system-ui,sans-serif;color:#132A17}
-a{color:#2E7D32}a:hover{color:#1B5E20}
-.serif{font-family:'Poppins',system-ui,sans-serif}
-.wrap{max-width:1240px;margin:0 auto;padding:0 32px;box-sizing:border-box}
-.nav{padding:10px 14px;border-radius:10px;text-decoration:none;color:#3E5643;font-weight:500;font-size:15px}
-.nav:hover{background:#EDF3EF;color:#1B5E20}
-.nav-on{background:#E8F5E9;color:#1B5E20;font-weight:600}
-.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;background:#2E7D32;color:#fff;font:600 15px 'Inter',sans-serif;text-decoration:none;border:0;cursor:pointer;box-sizing:border-box}
-.btn:hover{background:#1B5E20;color:#fff}
-.btn-sun{background:#FFA000;color:#132A17}.btn-sun:hover{background:#F57C00;color:#132A17}
-.btn-line{background:transparent;color:#F4F7F5;border:1px solid rgba(255,255,255,.45)}.btn-line:hover{background:rgba(255,255,255,.1);color:#fff}
-.btn-ghost{background:#fff;color:#1B5E20;border:1px solid #DCE5DE}.btn-ghost:hover{background:#EDF3EF;color:#1B5E20}
-.card{background:#fff;border:1px solid #DCE5DE;border-radius:20px;box-sizing:border-box}
-a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-color:#81C784;color:inherit}
-.tag{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;font-size:12.5px;font-weight:600}
-.tag-siram{background:#E0F2FE;color:#0369A1}.tag-pupuk{background:#FEF3C7;color:#92400E}.tag-periksa{background:#E8F5E9;color:#1B5E20}
-.chip{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid #DCE5DE;background:#fff;color:#132A17;font:500 14px 'Inter',sans-serif;text-decoration:none;cursor:pointer}
-.chip:hover{border-color:#2E7D32;color:#1B5E20}
-.chip-on{background:#1B5E20;border-color:#1B5E20;color:#fff}
-.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.muted{color:#3E5643}
-.link{font-weight:600;font-size:14.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:44px}
-.check{width:28px;height:28px;border-radius:50%;border:2px solid #A3B5A7;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:none;color:#fff}
-@media (max-width:720px){.wrap{padding:0 18px}h1.hero{font-size:40px !important}}
-</style>
+<link rel="stylesheet" href="assets/design-system.css">
 </head>
 <body>
 <div id="app"></div>
 <template id="dc-tpl">
 <div style="min-height: 100vh">
 
-<header style="background: #FFFFFF; border-bottom: 1px solid #DCE5DE">
-<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding-top: 14px; padding-bottom: 14px">
-<a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #132A17">
-<span style="width: 40px; height: 40px; border-radius: 12px; background: #2E7D32; color: #fff; display: flex; align-items: center; justify-content: center"><i data-lucide="sprout" width="22" height="22" stroke-width="1.8" aria-hidden="true"></i></span>
-<span style="display: flex; flex-direction: column"><span class="serif" style="font-weight: 700; font-size: 20px; line-height: 1.1">TaniPintar</span><span style="font-size: 12px; color: #3E5643">Pendamping tanam</span></span>
+<header class="site-header">
+<div class="wrap header-inner" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding-top: 14px; padding-bottom: 14px">
+<a class="brand" href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-text)">
+<span style="width: 40px; height: 40px; border-radius: 12px; background: var(--color-primary); color: var(--color-white); display: flex; align-items: center; justify-content: center"><i data-lucide="sprout" width="22" height="22" stroke-width="1.8" aria-hidden="true"></i></span>
+<span style="display: flex; flex-direction: column"><span class="serif" style="font-weight: 700; font-size: 20px; line-height: 1.1">TaniPintar</span><span style="font-size: 12px; color: var(--color-text-body)">Pendamping tanam</span></span>
 </a>
-<nav aria-label="Navigasi utama" style="display: flex; flex-wrap: wrap; gap: 2px; flex: 1 1 auto">
+<nav class="main-nav" aria-label="Navigasi utama" style="display: flex; flex-wrap: wrap; gap: 2px; flex: 1 1 auto">
 <a class="nav nav-on" href="index.html" aria-current="page">Beranda</a>
 <a class="nav" href="KatalogBibit.html">Katalog Bibit</a>
 <a class="nav" href="JadwalRawat.html">Jadwal Rawat</a>
@@ -53,62 +28,62 @@ a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-colo
 <a class="nav" href="Blog.html">Blog</a>
 <a class="nav" href="TanyaPenyuluh.html">Tanya Penyuluh</a>
 </nav>
-<div style="display: flex; align-items: center; gap: 10px">
+<div class="header-actions" style="display: flex; align-items: center; gap: 10px">
 <a class="btn" href="KatalogBibit.html"><i data-lucide="plus" width="18" height="18" stroke-width="2" aria-hidden="true"></i>Mulai tanam</a>
-<button aria-label="Akun saya" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #DCE5DE; background: #F4F7F5; font: 600 14px 'Inter', sans-serif; color: #1B5E20; cursor: pointer">RU</button>
+<button aria-label="Akun saya" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--color-border); background: var(--color-bg); font: 600 14px 'Inter', sans-serif; color: var(--color-primary-dark); cursor: pointer">RU</button>
 </div>
 </div>
 </header>
 
-<section style="background: #1B5E20; color: #F4F7F5; padding: 56px 0 48px">
+<section class="home-hero" style="background: var(--color-primary-dark); color: var(--color-bg)">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 40px">
 <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-end">
 <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
-<span class="eyebrow" style="color: #FFE7A8">Senin, 23 November 2026</span>
-<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: #E8F5E9"><i data-lucide="map-pin" width="16" height="16" stroke-width="1.8" aria-hidden="true"></i>Kebun rumah · Sleman, DI Yogyakarta</span>
+<span class="eyebrow" style="color: var(--color-accent-light)">Senin, 23 November 2026</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: var(--color-primary-soft)"><i data-lucide="map-pin" width="16" height="16" stroke-width="1.8" aria-hidden="true"></i>Kebun rumah · Sleman, DI Yogyakarta</span>
 </div>
-<h1 class="serif hero" style="margin: 0; font-size: 60px; line-height: 1.02; font-weight: 700; letter-spacing: -0.01em">Kebunmu hari ini</h1>
-<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #E8F5E9; max-width: 560px">Empat tugas rawat menunggu, tiga tanaman sedang tumbuh. Semua jadwal sudah disesuaikan dengan fase tanam.</p>
+<h1 class="serif hero" style="margin: 0; font-weight: 700">Kebunmu hari ini</h1>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: var(--color-primary-soft); max-width: 560px">Empat tugas rawat menunggu, tiga tanaman sedang tumbuh. Semua jadwal sudah disesuaikan dengan fase tanam.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px">
 <a class="btn btn-sun" href="#tugas">Lihat tugas hari ini</a>
 <a class="btn btn-line" href="TanyaPenyuluh.html">Tanya penyuluh</a>
 </div>
 </div>
 <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: center; gap: 14px; padding: 14px 18px; border-radius: 16px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16)">
-<span style="color: #FFA000; display: flex"><i data-lucide="sun" width="30" height="30" stroke-width="1.7" aria-hidden="true"></i></span>
-<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 17px">29°C · cerah berawan</span><span style="font-size: 14px; color: #E8F5E9">Hujan sore kemungkinan rendah — waktu ideal siram pagi</span></div>
+<div style="display: flex; align-items: center; gap: 14px; padding: 14px 18px; border-radius: 16px; background: rgba(var(--white-rgb),.08); border: 1px solid rgba(var(--white-rgb),.16)">
+<span style="color: var(--color-accent); display: flex"><i data-lucide="sun" width="30" height="30" stroke-width="1.7" aria-hidden="true"></i></span>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 17px">29°C · cerah berawan</span><span style="font-size: 14px; color: var(--color-primary-soft)">Hujan sore kemungkinan rendah — waktu ideal siram pagi</span></div>
 </div>
-<a href="TanamanDetail.html" class="card" style="background: #F4F7F5; border-color: #F4F7F5; padding: 22px 24px; color: #132A17">
+<a href="TanamanDetail.html" class="card" style="background: var(--color-bg); border-color: var(--color-bg); padding: 22px 24px; color: var(--color-text)">
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
-<span class="eyebrow" style="color: #3E5643">Sedang ditanam</span>
+<span class="eyebrow" style="color: var(--color-text-body)">Sedang ditanam</span>
 <span class="tag tag-periksa">Fase berbunga</span>
 </div>
 <div class="serif" style="font-size: 26px; font-weight: 700; margin: 8px 0 14px">Cabai rawit merah</div>
-<div style="height: 8px; border-radius: 99px; background: #DCE5DE; overflow: hidden"><div style="width: 29%; height: 100%; background: #2E7D32; border-radius: 99px"></div></div>
-<div style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 14px"><span class="muted">Hari ke-26 dari 90</span><span style="font-weight: 600; color: #2E7D32">Lihat detail →</span></div>
+<div style="height: 8px; border-radius: 99px; background: var(--color-border); overflow: hidden"><div style="width: 29%; height: 100%; background: var(--color-primary); border-radius: 99px"></div></div>
+<div style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 14px"><span class="muted">Hari ke-26 dari 90</span><span style="font-weight: 600; color: var(--color-primary)">Lihat detail →</span></div>
 </a>
 </div>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px" aria-label="Ringkasan kebun">
-<div style="display: flex; gap: 14px; align-items: center; padding: 18px 20px; border-radius: 16px; background: #236B28">
-<span style="width: 44px; height: 44px; border-radius: 12px; background: #F4F7F5; color: #2E7D32; display: flex; align-items: center; justify-content: center; flex: none"><i data-lucide="sprout" width="22" height="22" stroke-width="1.8" aria-hidden="true"></i></span>
-<div><div style="font-size: 22px; font-weight: 700">3 tanaman</div><div style="font-size: 13.5px; color: #E8F5E9">Aktif di 3 bedeng &amp; 6 polibag</div></div>
+<div style="display: flex; gap: 14px; align-items: center; padding: 18px 20px; border-radius: 16px; background: var(--color-primary-raised)">
+<span style="width: 44px; height: 44px; border-radius: 12px; background: var(--color-bg); color: var(--color-primary); display: flex; align-items: center; justify-content: center; flex: none"><i data-lucide="sprout" width="22" height="22" stroke-width="1.8" aria-hidden="true"></i></span>
+<div><div style="font-size: 22px; font-weight: 700">3 tanaman</div><div style="font-size: 13.5px; color: var(--color-primary-soft)">Aktif di 3 bedeng &amp; 6 polibag</div></div>
 </div>
-<div style="display: flex; gap: 14px; align-items: center; padding: 18px 20px; border-radius: 16px; background: #236B28">
-<span style="width: 44px; height: 44px; border-radius: 12px; background: #E0F2FE; color: #0369A1; display: flex; align-items: center; justify-content: center; flex: none"><i data-lucide="droplet" width="22" height="22" stroke-width="1.8" aria-hidden="true"></i></span>
-<div><div style="font-size: 22px; font-weight: 700">2,1 L</div><div style="font-size: 13.5px; color: #E8F5E9">Perkiraan air untuk penyiraman hari ini</div></div>
+<div style="display: flex; gap: 14px; align-items: center; padding: 18px 20px; border-radius: 16px; background: var(--color-primary-raised)">
+<span style="width: 44px; height: 44px; border-radius: 12px; background: var(--color-water-soft); color: var(--color-water-text); display: flex; align-items: center; justify-content: center; flex: none"><i data-lucide="droplet" width="22" height="22" stroke-width="1.8" aria-hidden="true"></i></span>
+<div><div style="font-size: 22px; font-weight: 700">2,1 L</div><div style="font-size: 13.5px; color: var(--color-primary-soft)">Perkiraan air untuk penyiraman hari ini</div></div>
 </div>
-<div style="display: flex; gap: 14px; align-items: center; padding: 18px 20px; border-radius: 16px; background: #236B28">
-<span style="width: 44px; height: 44px; border-radius: 12px; background: #FFF8E1; color: #92400E; display: flex; align-items: center; justify-content: center; flex: none"><i data-lucide="calendar-check" width="22" height="22" stroke-width="1.8" aria-hidden="true"></i></span>
-<div><div style="font-size: 22px; font-weight: 700">{{remaining}} tugas</div><div style="font-size: 13.5px; color: #E8F5E9">Tersisa hingga pukul 17.00</div></div>
+<div style="display: flex; gap: 14px; align-items: center; padding: 18px 20px; border-radius: 16px; background: var(--color-primary-raised)">
+<span style="width: 44px; height: 44px; border-radius: 12px; background: var(--color-accent-soft); color: var(--color-fertilizer-text); display: flex; align-items: center; justify-content: center; flex: none"><i data-lucide="calendar-check" width="22" height="22" stroke-width="1.8" aria-hidden="true"></i></span>
+<div><div style="font-size: 22px; font-weight: 700">{{remaining}} tugas</div><div style="font-size: 13.5px; color: var(--color-primary-soft)">Tersisa hingga pukul 17.00</div></div>
 </div>
 </div>
 </div>
 </section>
 
-<section id="tugas" style="padding: 64px 0 24px">
+<section id="tugas" class="section section--lead">
 <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
 <div class="card" style="flex: 999 1 560px; min-width: 0; padding: 28px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 8px">
@@ -118,20 +93,20 @@ a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-colo
 </div>
 <a class="link" href="JadwalRawat.html">Lihat jadwal minggu ini →</a>
 </div>
-<div style="height: 8px; border-radius: 99px; background: #EDF3EF; overflow: hidden; margin: 16px 0 8px"><div style="height: 100%; border-radius: 99px; background: #2E7D32; width: {{pct}}"></div></div>
+<div style="height: 8px; border-radius: 99px; background: var(--color-hover); overflow: hidden; margin: 16px 0 8px"><div style="height: 100%; border-radius: 99px; background: var(--color-primary); width: {{pct}}"></div></div>
 <div style="display: flex; flex-direction: column">
 <sc-for list="{{tasks}}" as="t" hint-placeholder-count="4">
-<div style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 0; border-top: 1px solid #EDF3EF">
+<div style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 0; border-top: 1px solid var(--color-hover)">
 <button class="check" onClick="{{t.toggle}}" aria-label="Tandai selesai: {{t.plant}}" style="{{t.boxStyle}}">
 <sc-if value="{{t.done}}" hint-placeholder-val="{{false}}"><i data-lucide="check" width="16" height="16" stroke-width="3" aria-hidden="true"></i></sc-if>
 </button>
 <div style="flex: 1; min-width: 0">
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
-<span style="font-size: 14px; color: #3E5643; font-variant-numeric: tabular-nums; width: 44px">{{t.time}}</span>
+<span style="font-size: 14px; color: var(--color-text-body); font-variant-numeric: tabular-nums; width: 44px">{{t.time}}</span>
 <span class="{{t.tagClass}}">{{t.type}}</span>
 <span style="font-weight: 600; font-size: 16.5px; {{t.titleStyle}}">{{t.plant}}</span>
 </div>
-<div class="muted" style="font-size: 14.5px; margin-top: 6px; padding-left: 54px">{{t.note}}</div>
+<div class="muted task-note" style="font-size: 14.5px; margin-top: 6px; padding-left: 54px">{{t.note}}</div>
 </div>
 </div>
 </sc-for>
@@ -141,11 +116,11 @@ a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-colo
 <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
 <div class="card" style="padding: 24px">
 <div style="display: flex; align-items: center; gap: 12px">
-<span style="width: 44px; height: 44px; border-radius: 50%; background: #E8F5E9; color: #2E7D32; display: flex; align-items: center; justify-content: center; flex: none"><i data-lucide="message-circle" width="22" height="22" stroke-width="1.8" aria-hidden="true"></i></span>
+<span style="width: 44px; height: 44px; border-radius: 50%; background: var(--color-primary-soft); color: var(--color-primary); display: flex; align-items: center; justify-content: center; flex: none"><i data-lucide="message-circle" width="22" height="22" stroke-width="1.8" aria-hidden="true"></i></span>
 <div style="flex: 1"><div style="font-weight: 700; font-size: 17px">Tanya penyuluh</div><div class="muted" style="font-size: 13.5px">Jawaban sesuai fase tanamanmu</div></div>
 <a class="link" href="TanyaPenyuluh.html">Buka</a>
 </div>
-<div style="margin: 16px 0; padding: 14px 16px; background: #EDF3EF; border-radius: 4px 16px 16px 16px; font-size: 15px; line-height: 1.55">Selamat pagi. Saya siap membantu soal tanam dan rawat. Mau mulai dari mana?</div>
+<div style="margin: 16px 0; padding: 14px 16px; background: var(--color-hover); border-radius: 4px 16px 16px 16px; font-size: 15px; line-height: 1.55">Selamat pagi. Saya siap membantu soal tanam dan rawat. Mau mulai dari mana?</div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
 <a class="chip" href="TanyaPenyuluh.html">Jam siram cabai?</a>
 <a class="chip" href="TanyaPenyuluh.html">Pupuk fase berbunga</a>
@@ -154,99 +129,99 @@ a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-colo
 </div>
 <form style="display: flex; gap: 8px; margin-top: 16px">
 <label for="ask" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Pertanyaan untuk penyuluh</label>
-<input id="ask" placeholder="Contoh: kapan pupuk tomat?" style="flex: 1; min-width: 0; height: 48px; border: 1px solid #DCE5DE; border-radius: 12px; padding: 0 14px; font: 15px 'Inter', sans-serif; background: #fff; color: #132A17">
+<input id="ask" placeholder="Contoh: kapan pupuk tomat?" style="flex: 1; min-width: 0; height: 48px; border: 1px solid var(--color-border); border-radius: 12px; padding: 0 14px; font: 15px 'Inter', sans-serif; background: var(--color-white); color: var(--color-text)">
 <a href="TanyaPenyuluh.html" class="btn" aria-label="Kirim pertanyaan" style="width: 48px; height: 48px; padding: 0; justify-content: center"><i data-lucide="send" width="20" height="20" stroke-width="2" aria-hidden="true"></i></a>
 </form>
 </div>
-<div style="padding: 24px; border-radius: 20px; background: #FFF8E1; border: 1px solid #FFE7A8">
-<div class="eyebrow" style="color: #92400E; display: flex; align-items: center; gap: 8px"><i data-lucide="sparkles" width="16" height="16" stroke-width="1.8" aria-hidden="true"></i>Tips hasil maksimal</div>
+<div style="padding: 24px; border-radius: 20px; background: var(--color-accent-soft); border: 1px solid var(--color-accent-light)">
+<div class="eyebrow" style="color: var(--color-fertilizer-text); display: flex; align-items: center; gap: 8px"><i data-lucide="sparkles" width="16" height="16" stroke-width="1.8" aria-hidden="true"></i>Tips hasil maksimal</div>
 <p style="margin: 12px 0 4px; font-size: 16px; line-height: 1.6">Cabai sedang berbunga. Jangan siram di atas daun pada siang hari dan kurangi nitrogen, ganti dengan kalium agar bunga tidak rontok.</p>
-<a class="link" href="TanyaPenyuluh.html" style="color: #92400E">Tanya detail perawatan →</a>
+<a class="link" href="TanyaPenyuluh.html" style="color: var(--color-fertilizer-text)">Tanya detail perawatan →</a>
 </div>
 </div>
 </div>
 </section>
 
-<section style="padding: 40px 0">
+<section class="section">
 <div class="wrap">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px; margin-bottom: 20px">
-<div><span class="eyebrow" style="color: #2E7D32">Kebunku</span><h2 class="serif" style="margin: 4px 0 0; font-size: 32px; font-weight: 700">Tanaman aktif</h2></div>
+<div><span class="eyebrow" style="color: var(--color-primary)">Kebunku</span><h2 class="serif" style="margin: 4px 0 0; font-size: 32px; font-weight: 700">Tanaman aktif</h2></div>
 <a class="link" href="KatalogBibit.html">+ Tambah bibit</a>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px">
 <a class="card" href="TanamanDetail.html" style="padding: 0; overflow: hidden">
-<div style="height: 150px; position: relative; overflow: hidden; background: #EDF3EF"><img src="images/tanaman-cabai-rawit.jpg" alt="Tanaman cabai rawit di polibag" style="width: 100%; height: 100%; object-fit: cover; display: block"><span class="tag" style="position: absolute; left: 16px; top: 16px; background: #fff; color: #1B5E20">Berbunga</span></div>
+<div style="height: 150px; position: relative; overflow: hidden; background: var(--color-hover)"><img src="images/tanaman-cabai-rawit.jpg" alt="Tanaman cabai rawit di polibag" style="width: 100%; height: 100%; object-fit: cover; display: block"><span class="tag" style="position: absolute; left: 16px; top: 16px; background: var(--color-white); color: var(--color-primary-dark)">Berbunga</span></div>
 <div style="padding: 20px 22px 22px">
 <div style="font-weight: 700; font-size: 18px">Cabai rawit merah</div>
 <div class="muted" style="font-size: 13.5px; margin: 4px 0 14px">Hari ke-26 dari 90 · 4 polibag</div>
-<div style="height: 6px; border-radius: 99px; background: #EDF3EF"><div style="width: 29%; height: 100%; background: #2E7D32; border-radius: 99px"></div></div>
-<div style="display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 14px; color: #0369A1; font-weight: 600"><i data-lucide="clock" width="16" height="16" stroke-width="1.8" aria-hidden="true"></i>Siram 06.30</div>
+<div style="height: 6px; border-radius: 99px; background: var(--color-hover)"><div style="width: 29%; height: 100%; background: var(--color-primary); border-radius: 99px"></div></div>
+<div style="display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 14px; color: var(--color-water-text); font-weight: 600"><i data-lucide="clock" width="16" height="16" stroke-width="1.8" aria-hidden="true"></i>Siram 06.30</div>
 </div>
 </a>
 <a class="card" href="TanamanDetail.html" style="padding: 0; overflow: hidden">
-<div style="height: 150px; position: relative; overflow: hidden; background: #EDF3EF"><img src="images/tanaman-tomat-cherry.jpg" alt="Tomat cherry berbuah di pot" style="width: 100%; height: 100%; object-fit: cover; display: block"><span class="tag" style="position: absolute; left: 16px; top: 16px; background: #fff; color: #B91C1C">Berbuah</span></div>
+<div style="height: 150px; position: relative; overflow: hidden; background: var(--color-hover)"><img src="images/tanaman-tomat-cherry.jpg" alt="Tomat cherry berbuah di pot" style="width: 100%; height: 100%; object-fit: cover; display: block"><span class="tag" style="position: absolute; left: 16px; top: 16px; background: var(--color-white); color: var(--color-danger-text)">Berbuah</span></div>
 <div style="padding: 20px 22px 22px">
 <div style="font-weight: 700; font-size: 18px">Tomat cherry</div>
 <div class="muted" style="font-size: 13.5px; margin: 4px 0 14px">Hari ke-41 dari 75 · 2 polibag</div>
-<div style="height: 6px; border-radius: 99px; background: #EDF3EF"><div style="width: 55%; height: 100%; background: #DC2626; border-radius: 99px"></div></div>
-<div style="display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 14px; color: #92400E; font-weight: 600"><i data-lucide="clock" width="16" height="16" stroke-width="1.8" aria-hidden="true"></i>Pupuk 07.00</div>
+<div style="height: 6px; border-radius: 99px; background: var(--color-hover)"><div style="width: 55%; height: 100%; background: var(--color-primary); border-radius: 99px"></div></div>
+<div style="display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 14px; color: var(--color-fertilizer-text); font-weight: 600"><i data-lucide="clock" width="16" height="16" stroke-width="1.8" aria-hidden="true"></i>Pupuk 07.00</div>
 </div>
 </a>
 <a class="card" href="TanamanDetail.html" style="padding: 0; overflow: hidden">
-<div style="height: 150px; position: relative; overflow: hidden; background: #EDF3EF"><img src="images/tanaman-selada-romaine.jpg" alt="Selada romaine muda di bedeng" style="width: 100%; height: 100%; object-fit: cover; display: block"><span class="tag" style="position: absolute; left: 16px; top: 16px; background: #fff; color: #1B5E20">Daun muda</span></div>
+<div style="height: 150px; position: relative; overflow: hidden; background: var(--color-hover)"><img src="images/tanaman-selada-romaine.jpg" alt="Selada romaine muda di bedeng" style="width: 100%; height: 100%; object-fit: cover; display: block"><span class="tag" style="position: absolute; left: 16px; top: 16px; background: var(--color-white); color: var(--color-primary-dark)">Daun muda</span></div>
 <div style="padding: 20px 22px 22px">
 <div style="font-weight: 700; font-size: 18px">Selada romaine</div>
 <div class="muted" style="font-size: 13.5px; margin: 4px 0 14px">Hari ke-18 dari 45 · 1 bedeng</div>
-<div style="height: 6px; border-radius: 99px; background: #EDF3EF"><div style="width: 40%; height: 100%; background: #66BB6A; border-radius: 99px"></div></div>
-<div style="display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 14px; color: #0369A1; font-weight: 600"><i data-lucide="clock" width="16" height="16" stroke-width="1.8" aria-hidden="true"></i>Siram 17.00</div>
+<div style="height: 6px; border-radius: 99px; background: var(--color-hover)"><div style="width: 40%; height: 100%; background: var(--color-secondary); border-radius: 99px"></div></div>
+<div style="display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 14px; color: var(--color-water-text); font-weight: 600"><i data-lucide="clock" width="16" height="16" stroke-width="1.8" aria-hidden="true"></i>Siram 17.00</div>
 </div>
 </a>
-<a class="card" href="KatalogBibit.html" style="border: 2px dashed #A3B5A7; background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 28px; text-align: center; color: #2E7D32">
-<span style="width: 52px; height: 52px; border-radius: 50%; background: #E8F5E9; display: flex; align-items: center; justify-content: center"><i data-lucide="plus" width="24" height="24" stroke-width="2" aria-hidden="true"></i></span>
-<span style="font-weight: 700; font-size: 16px; color: #132A17">Tanam bibit baru</span>
+<a class="card" href="KatalogBibit.html" style="border: 2px dashed var(--color-border-strong); background: transparent; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 28px; text-align: center; color: var(--color-primary)">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: var(--color-primary-soft); display: flex; align-items: center; justify-content: center"><i data-lucide="plus" width="24" height="24" stroke-width="2" aria-hidden="true"></i></span>
+<span style="font-weight: 700; font-size: 16px; color: var(--color-text)">Tanam bibit baru</span>
 <span class="muted" style="font-size: 13.5px">Pilih dari katalog, ikuti tutorialnya</span>
 </a>
 </div>
 </div>
 </section>
 
-<section style="padding: 40px 0">
+<section class="section">
 <div class="wrap">
-<div style="background: #fff; border: 1px solid #DCE5DE; border-radius: 24px; padding: 36px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center">
+<div style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: 24px; padding: 36px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center">
 <div style="flex: 1 1 280px">
-<span class="eyebrow" style="color: #2E7D32">Cara kerja</span>
+<span class="eyebrow" style="color: var(--color-primary)">Cara kerja</span>
 <h2 class="serif" style="margin: 6px 0 8px; font-size: 30px; font-weight: 700; line-height: 1.15">Dari bibit sampai panen, didampingi tiap langkah</h2>
 <p class="muted" style="margin: 0; font-size: 15.5px; line-height: 1.6">Pilih tanaman, ikuti tutorial tanamnya, lalu TaniPintar menyusun jadwal siram, pupuk, dan pemeriksaan sesuai fase.</p>
 </div>
-<ol style="flex: 2 1 560px; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px">
-<li style="padding: 18px; border-radius: 16px; background: #F4F7F5"><div class="serif" style="font-size: 28px; color: #2E7D32; font-weight: 700">1</div><div style="font-weight: 700; margin: 4px 0">Pilih bibit</div><div class="muted" style="font-size: 14px; line-height: 1.5">Sesuai lahan, cahaya, dan pengalamanmu</div></li>
-<li style="padding: 18px; border-radius: 16px; background: #F4F7F5"><div class="serif" style="font-size: 28px; color: #2E7D32; font-weight: 700">2</div><div style="font-weight: 700; margin: 4px 0">Ikuti tutorial tanam</div><div class="muted" style="font-size: 14px; line-height: 1.5">Semai, pindah tanam, media, dan jarak</div></li>
-<li style="padding: 18px; border-radius: 16px; background: #F4F7F5"><div class="serif" style="font-size: 28px; color: #2E7D32; font-weight: 700">3</div><div style="font-weight: 700; margin: 4px 0">Rawat terjadwal</div><div class="muted" style="font-size: 14px; line-height: 1.5">Pengingat siram pagi/sore dan pupuk per fase</div></li>
-<li style="padding: 18px; border-radius: 16px; background: #F4F7F5"><div class="serif" style="font-size: 28px; color: #2E7D32; font-weight: 700">4</div><div style="font-weight: 700; margin: 4px 0">Panen maksimal</div><div class="muted" style="font-size: 14px; line-height: 1.5">Tips per fase dan cek hama lebih awal</div></li>
+<ol class="steps-grid" style="flex: 2 1 560px; list-style: none; margin: 0; padding: 0">
+<li style="padding: 18px; border-radius: 16px; background: var(--color-bg)"><div class="serif" style="font-size: 28px; color: var(--color-primary); font-weight: 700">1</div><div style="font-weight: 700; margin: 4px 0">Pilih bibit</div><div class="muted" style="font-size: 14px; line-height: 1.5">Sesuai lahan, cahaya, dan pengalamanmu</div></li>
+<li style="padding: 18px; border-radius: 16px; background: var(--color-bg)"><div class="serif" style="font-size: 28px; color: var(--color-primary); font-weight: 700">2</div><div style="font-weight: 700; margin: 4px 0">Ikuti tutorial tanam</div><div class="muted" style="font-size: 14px; line-height: 1.5">Semai, pindah tanam, media, dan jarak</div></li>
+<li style="padding: 18px; border-radius: 16px; background: var(--color-bg)"><div class="serif" style="font-size: 28px; color: var(--color-primary); font-weight: 700">3</div><div style="font-weight: 700; margin: 4px 0">Rawat terjadwal</div><div class="muted" style="font-size: 14px; line-height: 1.5">Pengingat siram pagi/sore dan pupuk per fase</div></li>
+<li style="padding: 18px; border-radius: 16px; background: var(--color-bg)"><div class="serif" style="font-size: 28px; color: var(--color-primary); font-weight: 700">4</div><div style="font-weight: 700; margin: 4px 0">Panen maksimal</div><div class="muted" style="font-size: 14px; line-height: 1.5">Tips per fase dan cek hama lebih awal</div></li>
 </ol>
 </div>
 </div>
 </section>
 
-<section style="padding: 40px 0 64px">
+<section class="section section--bottom">
 <div class="wrap">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px; margin-bottom: 20px">
-<div><span class="eyebrow" style="color: #2E7D32">Belajar</span><h2 class="serif" style="margin: 4px 0 0; font-size: 32px; font-weight: 700">Panduan populer</h2></div>
+<div><span class="eyebrow" style="color: var(--color-primary)">Belajar</span><h2 class="serif" style="margin: 4px 0 0; font-size: 32px; font-weight: 700">Panduan populer</h2></div>
 <a class="link" href="PanduanDetail.html">Semua panduan →</a>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px">
 <a class="card" href="PanduanDetail.html" style="padding: 24px">
-<span style="width: 48px; height: 48px; border-radius: 14px; background: #E0F2FE; color: #0369A1; display: flex; align-items: center; justify-content: center"><i data-lucide="droplet" width="24" height="24" stroke-width="1.8" aria-hidden="true"></i></span>
+<span style="width: 48px; height: 48px; border-radius: 14px; background: var(--color-water-soft); color: var(--color-water-text); display: flex; align-items: center; justify-content: center"><i data-lucide="droplet" width="24" height="24" stroke-width="1.8" aria-hidden="true"></i></span>
 <div style="font-weight: 700; font-size: 19px; line-height: 1.35; margin: 18px 0 8px">Jam terbaik menyiram tanaman</div>
 <div class="muted" style="font-size: 13.5px">5 menit baca · semua tanaman</div>
 </a>
 <a class="card" href="PanduanDetail.html" style="padding: 24px">
-<span style="width: 48px; height: 48px; border-radius: 14px; background: #FFF8E1; color: #92400E; display: flex; align-items: center; justify-content: center"><i data-lucide="flask-conical" width="24" height="24" stroke-width="1.8" aria-hidden="true"></i></span>
+<span style="width: 48px; height: 48px; border-radius: 14px; background: var(--color-accent-soft); color: var(--color-fertilizer-text); display: flex; align-items: center; justify-content: center"><i data-lucide="flask-conical" width="24" height="24" stroke-width="1.8" aria-hidden="true"></i></span>
 <div style="font-weight: 700; font-size: 19px; line-height: 1.35; margin: 18px 0 8px">Mencampur NPK tanpa overdosis</div>
 <div class="muted" style="font-size: 13.5px">7 menit baca · sayur buah</div>
 </a>
 <a class="card" href="PanduanDetail.html" style="padding: 24px">
-<span style="width: 48px; height: 48px; border-radius: 14px; background: #FEE2E2; color: #B91C1C; display: flex; align-items: center; justify-content: center"><i data-lucide="bug" width="24" height="24" stroke-width="1.8" aria-hidden="true"></i></span>
+<span style="width: 48px; height: 48px; border-radius: 14px; background: var(--color-danger-soft); color: var(--color-danger-text); display: flex; align-items: center; justify-content: center"><i data-lucide="bug" width="24" height="24" stroke-width="1.8" aria-hidden="true"></i></span>
 <div style="font-weight: 700; font-size: 19px; line-height: 1.35; margin: 18px 0 8px">Mengenali hama dari bentuk daun</div>
 <div class="muted" style="font-size: 13.5px">6 menit baca · cabai &amp; tomat</div>
 </a>
@@ -254,10 +229,10 @@ a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-colo
 </div>
 </section>
 
-<section style="background: #E8F5E9; padding: 64px 0">
+<section class="section section--large" style="background: var(--color-primary-soft)">
 <div class="wrap">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 24px">
-<div><span class="eyebrow" style="color: #B91C1C">Blog TaniPintar</span><h2 class="serif" style="margin: 4px 0 0; font-size: 36px; font-weight: 700">Kabar &amp; cerita dari kebun</h2></div>
+<div><span class="eyebrow" style="color: var(--color-danger-text)">Blog TaniPintar</span><h2 class="serif" style="margin: 4px 0 0; font-size: 36px; font-weight: 700">Kabar &amp; cerita dari kebun</h2></div>
 <a class="btn btn-ghost" href="Blog.html">Lihat semua artikel</a>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px">
@@ -284,7 +259,7 @@ a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-colo
 </a>
 <a class="card" href="BlogDetail.html" style="display: flex; gap: 16px; padding: 16px; align-items: center">
 <img src="images/blog-pestisida-nabati.jpg" alt="Menyemprot pestisida nabati" style="width: 96px; height: 96px; border-radius: 14px; object-fit: cover; flex: none">
-<div style="min-width: 0"><span class="tag" style="background: #FEE2E2; color: #B91C1C">Hama &amp; penyakit</span><div style="font-weight: 700; font-size: 16.5px; line-height: 1.35; margin: 8px 0 4px">Pestisida nabati dari daun mimba dan bawang putih</div><div class="muted" style="font-size: 13px">12 Nov 2026 · 4 menit baca</div></div>
+<div style="min-width: 0"><span class="tag" style="background: var(--color-danger-soft); color: var(--color-danger-text)">Hama &amp; penyakit</span><div style="font-weight: 700; font-size: 16.5px; line-height: 1.35; margin: 8px 0 4px">Pestisida nabati dari daun mimba dan bawang putih</div><div class="muted" style="font-size: 13px">12 Nov 2026 · 4 menit baca</div></div>
 </a>
 <a class="card" href="BlogDetail.html" style="display: flex; gap: 16px; padding: 16px; align-items: center">
 <img src="images/blog-hidroponik-balkon.jpg" alt="Hidroponik sederhana" style="width: 96px; height: 96px; border-radius: 14px; object-fit: cover; flex: none">
@@ -295,19 +270,19 @@ a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-colo
 </div>
 </section>
 
-<section style="padding: 64px 0">
+<section class="section section--large">
 <div class="wrap">
-<div style="background: #1B5E20; border-radius: 28px; padding: 44px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; color: #F4F7F5">
+<div style="background: var(--color-primary-dark); border-radius: 28px; padding: 44px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; color: var(--color-bg)">
 <div style="flex: 1 1 420px">
 <h2 class="serif" style="margin: 0 0 8px; font-size: 32px; font-weight: 700">Bingung soal tanamanmu?</h2>
-<p style="margin: 0; color: #E8F5E9; font-size: 16px; line-height: 1.6">Tanya penyuluh kapan saja. Kirim foto daun, sebut fasenya, dan dapatkan langkah perawatan yang jelas.</p>
+<p style="margin: 0; color: var(--color-primary-soft); font-size: 16px; line-height: 1.6">Tanya penyuluh kapan saja. Kirim foto daun, sebut fasenya, dan dapatkan langkah perawatan yang jelas.</p>
 </div>
 <a class="btn btn-sun" href="TanyaPenyuluh.html"><i data-lucide="sparkles" width="18" height="18" stroke-width="1.8" aria-hidden="true"></i>Tanya penyuluh kapan saja</a>
 </div>
 </div>
 </section>
 
-<footer style="border-top: 1px solid #DCE5DE; padding: 40px 0 48px">
+<footer class="site-footer">
 <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between">
 <div style="flex: 1 1 260px"><div class="serif" style="font-size: 22px; font-weight: 700">TaniPintar</div><p class="muted" style="font-size: 14px; line-height: 1.6; max-width: 320px; margin: 8px 0 0">Pendamping tanam untuk kebun rumah dan petani pemula di Indonesia.</p></div>
 <nav aria-label="Tautan footer" style="display: flex; flex-wrap: wrap; gap: 48px; font-size: 14.5px">
@@ -335,8 +310,8 @@ class Component extends DCLogic {
       return Object.assign({}, t, {
         done: d,
         tagClass: 'tag tag-' + t.type.toLowerCase(),
-        boxStyle: d ? 'background:#2E7D32;border-color:#2E7D32' : '',
-        titleStyle: d ? 'text-decoration: line-through; color: #6E8573' : '',
+        boxStyle: d ? 'background:var(--color-primary);border-color:var(--color-primary)' : '',
+        titleStyle: d ? 'text-decoration: line-through; color: var(--color-text-body)' : '',
         toggle: () => this.setState({ done: Object.assign({}, done, { [t.id]: !d }) })
       });
     });

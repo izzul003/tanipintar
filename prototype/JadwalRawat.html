@@ -7,44 +7,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/icons.css">
-<style>
-body{margin:0;background:#F4F7F5;font-family:'Inter',system-ui,sans-serif;color:#132A17}
-a{color:#2E7D32}a:hover{color:#1B5E20}
-.serif{font-family:'Poppins',system-ui,sans-serif}
-.wrap{max-width:1240px;margin:0 auto;padding:0 32px;box-sizing:border-box}
-.nav{padding:10px 14px;border-radius:10px;text-decoration:none;color:#3E5643;font-weight:500;font-size:15px}
-.nav:hover{background:#EDF3EF;color:#1B5E20}
-.nav-on{background:#E8F5E9;color:#1B5E20;font-weight:600}
-.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;background:#2E7D32;color:#fff;font:600 15px 'Inter',sans-serif;text-decoration:none;border:0;cursor:pointer;box-sizing:border-box}
-.btn:hover{background:#1B5E20;color:#fff}
-.btn-sun{background:#FFA000;color:#132A17}.btn-sun:hover{background:#F57C00;color:#132A17}
-.btn-line{background:transparent;color:#F4F7F5;border:1px solid rgba(255,255,255,.45)}.btn-line:hover{background:rgba(255,255,255,.1);color:#fff}
-.btn-ghost{background:#fff;color:#1B5E20;border:1px solid #DCE5DE}.btn-ghost:hover{background:#EDF3EF;color:#1B5E20}
-.card{background:#fff;border:1px solid #DCE5DE;border-radius:20px;box-sizing:border-box}
-a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-color:#81C784;color:inherit}
-.tag{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;font-size:12.5px;font-weight:600}
-.tag-siram{background:#E0F2FE;color:#0369A1}.tag-pupuk{background:#FEF3C7;color:#92400E}.tag-periksa{background:#E8F5E9;color:#1B5E20}
-.chip{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid #DCE5DE;background:#fff;color:#132A17;font:500 14px 'Inter',sans-serif;text-decoration:none;cursor:pointer}
-.chip:hover{border-color:#2E7D32;color:#1B5E20}
-.chip-on{background:#1B5E20;border-color:#1B5E20;color:#fff}
-.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.muted{color:#3E5643}
-.link{font-weight:600;font-size:14.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:44px}
-.check{width:28px;height:28px;border-radius:50%;border:2px solid #A3B5A7;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:none;color:#fff}
-@media (max-width:720px){.wrap{padding:0 18px}h1.hero{font-size:40px !important}}
-</style>
+<link rel="stylesheet" href="assets/design-system.css">
 </head>
 <body>
 <div id="app"></div>
 <template id="dc-tpl">
 <div style="min-height: 100vh">
-<header style="background: #FFFFFF; border-bottom: 1px solid #DCE5DE">
-<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding-top: 14px; padding-bottom: 14px">
-<a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #132A17">
-<span style="width: 40px; height: 40px; border-radius: 12px; background: #2E7D32; color: #fff; display: flex; align-items: center; justify-content: center"><i data-lucide="sprout" width="22" height="22" stroke-width="1.8" aria-hidden="true"></i></span>
-<span style="display: flex; flex-direction: column"><span class="serif" style="font-weight: 700; font-size: 20px; line-height: 1.1">TaniPintar</span><span style="font-size: 12px; color: #3E5643">Pendamping tanam</span></span>
+<header class="site-header">
+<div class="wrap header-inner" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding-top: 14px; padding-bottom: 14px">
+<a class="brand" href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-text)">
+<span style="width: 40px; height: 40px; border-radius: 12px; background: var(--color-primary); color: var(--color-white); display: flex; align-items: center; justify-content: center"><i data-lucide="sprout" width="22" height="22" stroke-width="1.8" aria-hidden="true"></i></span>
+<span style="display: flex; flex-direction: column"><span class="serif" style="font-weight: 700; font-size: 20px; line-height: 1.1">TaniPintar</span><span style="font-size: 12px; color: var(--color-text-body)">Pendamping tanam</span></span>
 </a>
-<nav aria-label="Navigasi utama" style="display: flex; flex-wrap: wrap; gap: 2px; flex: 1 1 auto">
+<nav class="main-nav" aria-label="Navigasi utama" style="display: flex; flex-wrap: wrap; gap: 2px; flex: 1 1 auto">
 <a class="nav" href="index.html">Beranda</a>
 <a class="nav" href="KatalogBibit.html">Katalog Bibit</a>
 <a class="nav nav-on" href="JadwalRawat.html" aria-current="page">Jadwal Rawat</a>
@@ -52,17 +27,17 @@ a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-colo
 <a class="nav" href="Blog.html">Blog</a>
 <a class="nav" href="TanyaPenyuluh.html">Tanya Penyuluh</a>
 </nav>
-<div style="display: flex; align-items: center; gap: 10px">
+<div class="header-actions" style="display: flex; align-items: center; gap: 10px">
 <a class="btn" href="KatalogBibit.html"><i data-lucide="plus" width="18" height="18" stroke-width="2" aria-hidden="true"></i>Mulai tanam</a>
-<button aria-label="Akun saya" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #DCE5DE; background: #F4F7F5; font: 600 14px 'Inter', sans-serif; color: #1B5E20; cursor: pointer">RU</button>
+<button aria-label="Akun saya" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--color-border); background: var(--color-bg); font: 600 14px 'Inter', sans-serif; color: var(--color-primary-dark); cursor: pointer">RU</button>
 </div>
 </div>
 </header>
-<section style="padding: 36px 0 20px">
+<section class="page-heading">
 <div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
 <div>
 <a class="link" href="index.html" style="min-height: 32px"><i data-lucide="arrow-left" width="16" height="16" stroke-width="1.8" aria-hidden="true"></i>Beranda</a>
-<h1 class="serif" style="margin: 6px 0 6px; font-size: 44px; font-weight: 700">Jadwal rawat</h1>
+<h1 class="serif page-title" style="margin: 6px 0 6px; font-weight: 700">Jadwal rawat</h1>
 <p class="muted" style="margin: 0; font-size: 16px">Minggu ini · 23–29 November 2026 · disesuaikan dengan fase dan cuaca</p>
 </div>
 <div style="display: flex; gap: 10px; flex-wrap: wrap">
@@ -72,12 +47,12 @@ a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-colo
 </div>
 </section>
 
-<section style="padding: 8px 0 72px">
+<section class="section section--flush-top section--bottom">
 <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
 <div style="flex: 999 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
-<div role="tablist" aria-label="Pilih hari" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; overflow-x: auto">
+<div class="schedule-days" role="tablist" aria-label="Pilih hari" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; overflow-x: auto">
 <sc-for list="{{days}}" as="d" hint-placeholder-count="7">
-<button role="tab" aria-selected="{{d.sel}}" onClick="{{d.pick}}" style="min-width: 72px; padding: 14px 6px; border-radius: 16px; border: 1px solid #DCE5DE; cursor: pointer; font-family: 'Inter', sans-serif; display: flex; flex-direction: column; align-items: center; gap: 4px; {{d.style}}">
+<button role="tab" aria-selected="{{d.sel}}" onClick="{{d.pick}}" style="min-width: 72px; padding: 14px 6px; border-radius: 16px; border: 1px solid var(--color-border); cursor: pointer; font-family: 'Inter', sans-serif; display: flex; flex-direction: column; align-items: center; gap: 4px; {{d.style}}">
 <span style="font-size: 13px; font-weight: 600; opacity: .8">{{d.dow}}</span>
 <span class="serif" style="font-size: 26px; font-weight: 700">{{d.date}}</span>
 <span style="font-size: 12px; opacity: .85">{{d.count}} tugas</span>
@@ -89,7 +64,7 @@ a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-colo
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
 <div>
 <h2 class="serif" style="margin: 0; font-size: 26px; font-weight: 700">{{dayTitle}}</h2>
-<div style="display: flex; align-items: center; gap: 8px; margin-top: 6px; font-size: 14.5px; color: #3E5643"><span style="color: #D97706; display: flex"><i data-lucide="sun" width="18" height="18" stroke-width="1.8" aria-hidden="true"></i></span>{{weather}}</div>
+<div style="display: flex; align-items: center; gap: 8px; margin-top: 6px; font-size: 14.5px; color: var(--color-text-body)"><span style="color: var(--color-sun); display: flex"><i data-lucide="sun" width="18" height="18" stroke-width="1.8" aria-hidden="true"></i></span>{{weather}}</div>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 6px" role="group" aria-label="Filter jenis tugas">
 <sc-for list="{{filters}}" as="f" hint-placeholder-count="4">
@@ -98,26 +73,26 @@ a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-colo
 </div>
 </div>
 <sc-if value="{{rainNote}}" hint-placeholder-val="{{false}}">
-<div style="margin-top: 16px; padding: 12px 16px; border-radius: 12px; background: #E0F2FE; color: #0369A1; font-size: 14.5px; display: flex; gap: 10px; align-items: center"><i data-lucide="droplet" width="18" height="18" stroke-width="1.8" aria-hidden="true"></i>Hujan diperkirakan sore ini — siram sore selada otomatis dilewati.</div>
+<div style="margin-top: 16px; padding: 12px 16px; border-radius: 12px; background: var(--color-water-soft); color: var(--color-water-text); font-size: 14.5px; display: flex; gap: 10px; align-items: center"><i data-lucide="droplet" width="18" height="18" stroke-width="1.8" aria-hidden="true"></i>Hujan diperkirakan sore ini — siram sore selada otomatis dilewati.</div>
 </sc-if>
 <div style="margin-top: 8px">
 <sc-for list="{{tasks}}" as="t" hint-placeholder-count="4">
-<div style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 0; border-top: 1px solid #EDF3EF">
+<div style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 0; border-top: 1px solid var(--color-hover)">
 <button class="check" onClick="{{t.toggle}}" aria-label="Tandai selesai: {{t.plant}}" style="{{t.boxStyle}}">
 <sc-if value="{{t.done}}" hint-placeholder-val="{{false}}"><i data-lucide="check" width="16" height="16" stroke-width="3" aria-hidden="true"></i></sc-if>
 </button>
 <div style="flex: 1; min-width: 0">
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
-<span style="font-size: 14px; color: #3E5643; width: 44px">{{t.time}}</span>
+<span style="font-size: 14px; color: var(--color-text-body); width: 44px">{{t.time}}</span>
 <span class="{{t.tagClass}}">{{t.type}}</span>
-<a href="TanamanDetail.html" style="font-weight: 600; font-size: 16.5px; color: #132A17; text-decoration: none; {{t.titleStyle}}">{{t.plant}}</a>
+<a href="TanamanDetail.html" style="font-weight: 600; font-size: 16.5px; color: var(--color-text); text-decoration: none; {{t.titleStyle}}">{{t.plant}}</a>
 </div>
-<div class="muted" style="font-size: 14.5px; margin-top: 6px; padding-left: 54px">{{t.note}}</div>
+<div class="muted task-note" style="font-size: 14.5px; margin-top: 6px; padding-left: 54px">{{t.note}}</div>
 </div>
 </div>
 </sc-for>
 <sc-if value="{{empty}}" hint-placeholder-val="{{false}}">
-<div class="muted" style="padding: 32px 0; text-align: center; border-top: 1px solid #EDF3EF">Tidak ada tugas jenis ini di hari terpilih.</div>
+<div class="muted" style="padding: 32px 0; text-align: center; border-top: 1px solid var(--color-hover)">Tidak ada tugas jenis ini di hari terpilih.</div>
 </sc-if>
 </div>
 </div>
@@ -127,28 +102,28 @@ a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-colo
 <div class="card" style="padding: 24px">
 <h2 style="margin: 0 0 14px; font-size: 18px; font-weight: 700">Ringkasan minggu ini</h2>
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
-<div style="padding: 14px; border-radius: 14px; background: #E0F2FE; color: #0369A1"><div class="serif" style="font-size: 28px; font-weight: 700">{{wk.siram}}</div><div style="font-size: 13px; font-weight: 600">Siram</div></div>
-<div style="padding: 14px; border-radius: 14px; background: #FEF3C7; color: #92400E"><div class="serif" style="font-size: 28px; font-weight: 700">{{wk.pupuk}}</div><div style="font-size: 13px; font-weight: 600">Pupuk</div></div>
-<div style="padding: 14px; border-radius: 14px; background: #E8F5E9; color: #2E7D32"><div class="serif" style="font-size: 28px; font-weight: 700">{{wk.periksa}}</div><div style="font-size: 13px; font-weight: 600">Periksa</div></div>
+<div style="padding: 14px; border-radius: 14px; background: var(--color-water-soft); color: var(--color-water-text)"><div class="serif" style="font-size: 28px; font-weight: 700">{{wk.siram}}</div><div style="font-size: 13px; font-weight: 600">Siram</div></div>
+<div style="padding: 14px; border-radius: 14px; background: var(--color-fertilizer-soft); color: var(--color-fertilizer-text)"><div class="serif" style="font-size: 28px; font-weight: 700">{{wk.pupuk}}</div><div style="font-size: 13px; font-weight: 600">Pupuk</div></div>
+<div style="padding: 14px; border-radius: 14px; background: var(--color-primary-soft); color: var(--color-primary)"><div class="serif" style="font-size: 28px; font-weight: 700">{{wk.periksa}}</div><div style="font-size: 13px; font-weight: 600">Periksa</div></div>
 </div>
 </div>
 <div class="card" style="padding: 24px">
 <h2 style="margin: 0 0 4px; font-size: 18px; font-weight: 700; display: flex; gap: 8px; align-items: center"><i data-lucide="bell" width="18" height="18" stroke-width="1.8" aria-hidden="true"></i>Pengingat</h2>
 <p class="muted" style="margin: 0 0 14px; font-size: 14px">Dikirim 15 menit sebelum jadwal.</p>
-<label style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-top: 1px solid #EDF3EF; font-size: 15px">Notifikasi aplikasi<input type="checkbox" checked style="width: 22px; height: 22px; accent-color: #2E7D32"></label>
-<label style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-top: 1px solid #EDF3EF; font-size: 15px">Pesan WhatsApp<input type="checkbox" style="width: 22px; height: 22px; accent-color: #2E7D32"></label>
-<label style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-top: 1px solid #EDF3EF; font-size: 15px">Lewati siram saat hujan<input type="checkbox" checked style="width: 22px; height: 22px; accent-color: #2E7D32"></label>
+<label style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-top: 1px solid var(--color-hover); font-size: 15px">Notifikasi aplikasi<input type="checkbox" checked style="width: 22px; height: 22px; accent-color: var(--color-primary)"></label>
+<label style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-top: 1px solid var(--color-hover); font-size: 15px">Pesan WhatsApp<input type="checkbox" style="width: 22px; height: 22px; accent-color: var(--color-primary)"></label>
+<label style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-top: 1px solid var(--color-hover); font-size: 15px">Lewati siram saat hujan<input type="checkbox" checked style="width: 22px; height: 22px; accent-color: var(--color-primary)"></label>
 </div>
-<div style="padding: 24px; border-radius: 20px; background: #FFF8E1; border: 1px solid #FFE7A8">
-<div class="eyebrow" style="color: #92400E">Kenapa jam segini?</div>
+<div style="padding: 24px; border-radius: 20px; background: var(--color-accent-soft); border: 1px solid var(--color-accent-light)">
+<div class="eyebrow" style="color: var(--color-fertilizer-text)">Kenapa jam segini?</div>
 <p style="margin: 10px 0 4px; font-size: 15px; line-height: 1.6">Siram pagi sebelum 08.00 memberi akar waktu menyerap air sebelum terik. Siram sore hanya untuk tanaman daun di hari panas.</p>
-<a class="link" href="PanduanDetail.html" style="color: #92400E">Baca panduan menyiram →</a>
+<a class="link" href="PanduanDetail.html" style="color: var(--color-fertilizer-text)">Baca panduan menyiram →</a>
 </div>
 </aside>
 </div>
 </section>
 
-<footer style="border-top: 1px solid #DCE5DE; padding: 40px 0 48px">
+<footer class="site-footer">
 <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between">
 <div style="flex: 1 1 260px"><div class="serif" style="font-size: 22px; font-weight: 700">TaniPintar</div><p class="muted" style="font-size: 14px; line-height: 1.6; max-width: 320px; margin: 8px 0 0">Pendamping tanam untuk kebun rumah dan petani pemula di Indonesia.</p></div>
 <nav aria-label="Tautan footer" style="display: flex; flex-wrap: wrap; gap: 48px; font-size: 14.5px">
@@ -193,7 +168,7 @@ class Component extends DCLogic {
     const { day, filter, done } = this.state;
     const days = wk.map((d, i) => ({
       dow: d.dow, date: d.date, count: d.tasks.length, sel: i === day,
-      style: i === day ? 'background:#1B5E20;color:#fff;border-color:#1B5E20' : 'background:#fff;color:#132A17',
+      style: i === day ? 'background:var(--color-primary-dark);color:var(--color-white);border-color:var(--color-primary-dark)' : 'background:var(--color-white);color:var(--color-text)',
       pick: () => this.setState({ day: i })
     }));
     const cur = wk[day];
@@ -202,8 +177,8 @@ class Component extends DCLogic {
       const d = !!done[key];
       return Object.assign({}, t, {
         done: d, tagClass: 'tag tag-' + t.type.toLowerCase(),
-        boxStyle: d ? 'background:#2E7D32;border-color:#2E7D32' : '',
-        titleStyle: d ? 'text-decoration: line-through; color: #6E8573' : '',
+        boxStyle: d ? 'background:var(--color-primary);border-color:var(--color-primary)' : '',
+        titleStyle: d ? 'text-decoration: line-through; color: var(--color-text-body)' : '',
         toggle: () => this.setState({ done: Object.assign({}, done, { [key]: !d }) })
       });
     });
